@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'FRCircleSlider_Example' do
+  pod 'FRCircleSlider', :path => '../'
+
+  target 'FRCircleSlider_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
