@@ -1,0 +1,727 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D41FE9F40245B0AC6972BF7B3C87249 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		20515A54362166F7190B64BD7B39170B /* FRCircleSlider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D510D8B5D73DCAC4B46CEA33BF539BBD /* FRCircleSlider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48E00898DE46DB7AE88FB3A4410A568B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		7C1676ADA272525AB54C98A2D50CE3B4 /* Pods-FRCircleSlider_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F102E66777A421255BC7DE41B6D0AFE /* Pods-FRCircleSlider_Example-dummy.m */; };
+		83BAC930485B7A2E81776E64824BA9AD /* FRCircleSlider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EBD37C9F8AF8E5895CBF18620433183B /* FRCircleSlider-dummy.m */; };
+		AD901D057BFEB306EE1C0965A9AE9AC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		B2A1788326FF46457B348F8CC926384A /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFAA67994769FC5C5E17D4AC3701F28 /* ReplaceMe.swift */; };
+		BFED69C27739AF7F7D80B6524E230CAB /* Pods-FRCircleSlider_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 860D4188B731094A145C0A0BE738C067 /* Pods-FRCircleSlider_Tests-dummy.m */; };
+		E5E32EE5B74F411A28CF7B3B6C54644B /* Pods-FRCircleSlider_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 957C5C2D382565A7D1DA17755DD7ADD0 /* Pods-FRCircleSlider_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F63EA6BCD5767A59A202B0801243BC91 /* Pods-FRCircleSlider_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C90732E3B886957F175D71C717C04711 /* Pods-FRCircleSlider_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1C81CC9744FA2509910646D2762253FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC5F08483F3AA9A5C353830E2D0F565E;
+			remoteInfo = FRCircleSlider;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		059BFF900783657024BAC44F75BEEA01 /* Pods_FRCircleSlider_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FRCircleSlider_Tests.framework; path = "Pods-FRCircleSlider_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05FBC51D04314BC0B3E45D9D699FDC3A /* Pods-FRCircleSlider_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FRCircleSlider_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1E686FD1A4D5B684D66A863DC8728D86 /* FRCircleSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FRCircleSlider.framework; path = FRCircleSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F102E66777A421255BC7DE41B6D0AFE /* Pods-FRCircleSlider_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FRCircleSlider_Example-dummy.m"; sourceTree = "<group>"; };
+		273CEC18CBE699DE22B6999D7405EE39 /* FRCircleSlider.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FRCircleSlider.xcconfig; sourceTree = "<group>"; };
+		30ABE820A842501C9C9D01216F7834F4 /* Pods-FRCircleSlider_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FRCircleSlider_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		32E086BFCFAB23E1CC0B9F63B12CA812 /* Pods-FRCircleSlider_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FRCircleSlider_Example-frameworks.sh"; sourceTree = "<group>"; };
+		41D6A44F7ADA08928B2D64E29587B708 /* Pods-FRCircleSlider_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FRCircleSlider_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		44C99B24112FAE71A29D1DD58B8AEF10 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		450E4595BFB13004D1F6E35242B081B2 /* Pods-FRCircleSlider_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FRCircleSlider_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4865D13FA879E3022D1066729DC9559B /* Pods-FRCircleSlider_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FRCircleSlider_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		600167E6A98BD94C2CBB4A71D531A43B /* Pods-FRCircleSlider_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FRCircleSlider_Tests-resources.sh"; sourceTree = "<group>"; };
+		630BF1F7EE156E5C4AF9370B708F4127 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		638479E44DB8E6B7FAD46188547C6035 /* Pods-FRCircleSlider_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FRCircleSlider_Example-resources.sh"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		66C35812580F8AA755543BE2DF97C6FA /* Pods-FRCircleSlider_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FRCircleSlider_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		6E149703797912D3335EC7DD88BEB81C /* Pods-FRCircleSlider_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FRCircleSlider_Example.modulemap"; sourceTree = "<group>"; };
+		709574413C94ACB0C8ECA60C935E294C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FFAA67994769FC5C5E17D4AC3701F28 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		860D4188B731094A145C0A0BE738C067 /* Pods-FRCircleSlider_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FRCircleSlider_Tests-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		957C5C2D382565A7D1DA17755DD7ADD0 /* Pods-FRCircleSlider_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FRCircleSlider_Tests-umbrella.h"; sourceTree = "<group>"; };
+		96F49F5D9E92DD4D78A044B83F594D21 /* Pods-FRCircleSlider_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FRCircleSlider_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B55385D1CA6C7C6A4A24CC6018979D2D /* FRCircleSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FRCircleSlider.modulemap; sourceTree = "<group>"; };
+		C90732E3B886957F175D71C717C04711 /* Pods-FRCircleSlider_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FRCircleSlider_Example-umbrella.h"; sourceTree = "<group>"; };
+		CA06113759FC07D560A10BDD3C3A00E9 /* Pods-FRCircleSlider_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FRCircleSlider_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D0B4753EFD9FD9CE77705769DFF2B3A4 /* FRCircleSlider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FRCircleSlider-prefix.pch"; sourceTree = "<group>"; };
+		D510D8B5D73DCAC4B46CEA33BF539BBD /* FRCircleSlider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FRCircleSlider-umbrella.h"; sourceTree = "<group>"; };
+		D7EBC1076011B89330E6EE5CDA209616 /* Pods-FRCircleSlider_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FRCircleSlider_Tests.modulemap"; sourceTree = "<group>"; };
+		EB7D281AD1986DA2DA4913A5ECFA1E75 /* Pods_FRCircleSlider_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FRCircleSlider_Example.framework; path = "Pods-FRCircleSlider_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBCDA4194C1E757393908C19D8B5D2E4 /* Pods-FRCircleSlider_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FRCircleSlider_Example.release.xcconfig"; sourceTree = "<group>"; };
+		EBD37C9F8AF8E5895CBF18620433183B /* FRCircleSlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FRCircleSlider-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D2C495794E4CB22336A644F750C120B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D41FE9F40245B0AC6972BF7B3C87249 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EE3DDF1F7323AA304753C7D996BC948 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD901D057BFEB306EE1C0965A9AE9AC1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B284A44185F699CCB931C902FD8F76B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48E00898DE46DB7AE88FB3A4410A568B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D6E78FE6B86A29FEF68E84FB755EF88 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC453D508034AAE05C8765BC01519572 /* Pods-FRCircleSlider_Example */,
+				96F8EDD76454E03A45AD487421219C4A /* Pods-FRCircleSlider_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		1BCF444C9B4BB7A23957E4B90FBA8180 /* FRCircleSlider */ = {
+			isa = PBXGroup;
+			children = (
+				BD80EFCC1BE7AD048D9D25EE19B04FCF /* FRCircleSlider */,
+				F8CF62574EF9B855A468B1718B59EF58 /* Support Files */,
+			);
+			name = FRCircleSlider;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		396D8D60BD553D2FB592937A19D096F5 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1BCF444C9B4BB7A23957E4B90FBA8180 /* FRCircleSlider */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		5E82A8C5A0AB9E9600B868207C89B136 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7FFAA67994769FC5C5E17D4AC3701F28 /* ReplaceMe.swift */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				396D8D60BD553D2FB592937A19D096F5 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				A235AF184D957CCC7567A6C3B260C77E /* Products */,
+				0D6E78FE6B86A29FEF68E84FB755EF88 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		96F8EDD76454E03A45AD487421219C4A /* Pods-FRCircleSlider_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				44C99B24112FAE71A29D1DD58B8AEF10 /* Info.plist */,
+				D7EBC1076011B89330E6EE5CDA209616 /* Pods-FRCircleSlider_Tests.modulemap */,
+				4865D13FA879E3022D1066729DC9559B /* Pods-FRCircleSlider_Tests-acknowledgements.markdown */,
+				05FBC51D04314BC0B3E45D9D699FDC3A /* Pods-FRCircleSlider_Tests-acknowledgements.plist */,
+				860D4188B731094A145C0A0BE738C067 /* Pods-FRCircleSlider_Tests-dummy.m */,
+				41D6A44F7ADA08928B2D64E29587B708 /* Pods-FRCircleSlider_Tests-frameworks.sh */,
+				600167E6A98BD94C2CBB4A71D531A43B /* Pods-FRCircleSlider_Tests-resources.sh */,
+				957C5C2D382565A7D1DA17755DD7ADD0 /* Pods-FRCircleSlider_Tests-umbrella.h */,
+				66C35812580F8AA755543BE2DF97C6FA /* Pods-FRCircleSlider_Tests.debug.xcconfig */,
+				96F49F5D9E92DD4D78A044B83F594D21 /* Pods-FRCircleSlider_Tests.release.xcconfig */,
+			);
+			name = "Pods-FRCircleSlider_Tests";
+			path = "Target Support Files/Pods-FRCircleSlider_Tests";
+			sourceTree = "<group>";
+		};
+		A235AF184D957CCC7567A6C3B260C77E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E686FD1A4D5B684D66A863DC8728D86 /* FRCircleSlider.framework */,
+				EB7D281AD1986DA2DA4913A5ECFA1E75 /* Pods_FRCircleSlider_Example.framework */,
+				059BFF900783657024BAC44F75BEEA01 /* Pods_FRCircleSlider_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD80EFCC1BE7AD048D9D25EE19B04FCF /* FRCircleSlider */ = {
+			isa = PBXGroup;
+			children = (
+				5E82A8C5A0AB9E9600B868207C89B136 /* Classes */,
+			);
+			name = FRCircleSlider;
+			path = FRCircleSlider;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F8CF62574EF9B855A468B1718B59EF58 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B55385D1CA6C7C6A4A24CC6018979D2D /* FRCircleSlider.modulemap */,
+				273CEC18CBE699DE22B6999D7405EE39 /* FRCircleSlider.xcconfig */,
+				EBD37C9F8AF8E5895CBF18620433183B /* FRCircleSlider-dummy.m */,
+				D0B4753EFD9FD9CE77705769DFF2B3A4 /* FRCircleSlider-prefix.pch */,
+				D510D8B5D73DCAC4B46CEA33BF539BBD /* FRCircleSlider-umbrella.h */,
+				630BF1F7EE156E5C4AF9370B708F4127 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/FRCircleSlider";
+			sourceTree = "<group>";
+		};
+		FC453D508034AAE05C8765BC01519572 /* Pods-FRCircleSlider_Example */ = {
+			isa = PBXGroup;
+			children = (
+				709574413C94ACB0C8ECA60C935E294C /* Info.plist */,
+				6E149703797912D3335EC7DD88BEB81C /* Pods-FRCircleSlider_Example.modulemap */,
+				450E4595BFB13004D1F6E35242B081B2 /* Pods-FRCircleSlider_Example-acknowledgements.markdown */,
+				30ABE820A842501C9C9D01216F7834F4 /* Pods-FRCircleSlider_Example-acknowledgements.plist */,
+				1F102E66777A421255BC7DE41B6D0AFE /* Pods-FRCircleSlider_Example-dummy.m */,
+				32E086BFCFAB23E1CC0B9F63B12CA812 /* Pods-FRCircleSlider_Example-frameworks.sh */,
+				638479E44DB8E6B7FAD46188547C6035 /* Pods-FRCircleSlider_Example-resources.sh */,
+				C90732E3B886957F175D71C717C04711 /* Pods-FRCircleSlider_Example-umbrella.h */,
+				CA06113759FC07D560A10BDD3C3A00E9 /* Pods-FRCircleSlider_Example.debug.xcconfig */,
+				EBCDA4194C1E757393908C19D8B5D2E4 /* Pods-FRCircleSlider_Example.release.xcconfig */,
+			);
+			name = "Pods-FRCircleSlider_Example";
+			path = "Target Support Files/Pods-FRCircleSlider_Example";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		22CDFD14858D86448A95E7F86B7A2EF2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5E32EE5B74F411A28CF7B3B6C54644B /* Pods-FRCircleSlider_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48B0285EB5FD531FFEA9A7499CD312C6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F63EA6BCD5767A59A202B0801243BC91 /* Pods-FRCircleSlider_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95864378F1EB6943FEE4F3E57D05A360 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20515A54362166F7190B64BD7B39170B /* FRCircleSlider-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6490773BBCA5009ED803737F9F0553D2 /* Pods-FRCircleSlider_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F2C655BE7D749E91B494E5D8085B171 /* Build configuration list for PBXNativeTarget "Pods-FRCircleSlider_Tests" */;
+			buildPhases = (
+				750C49BC2F597F1B55100CC4BBDE1063 /* Sources */,
+				6EE3DDF1F7323AA304753C7D996BC948 /* Frameworks */,
+				22CDFD14858D86448A95E7F86B7A2EF2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-FRCircleSlider_Tests";
+			productName = "Pods-FRCircleSlider_Tests";
+			productReference = 059BFF900783657024BAC44F75BEEA01 /* Pods_FRCircleSlider_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AC5F08483F3AA9A5C353830E2D0F565E /* FRCircleSlider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8853781786B4136CE2F02603D7B27A4 /* Build configuration list for PBXNativeTarget "FRCircleSlider" */;
+			buildPhases = (
+				C88612E4EAECB3D25EFB4C2430F17590 /* Sources */,
+				4D2C495794E4CB22336A644F750C120B /* Frameworks */,
+				95864378F1EB6943FEE4F3E57D05A360 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FRCircleSlider;
+			productName = FRCircleSlider;
+			productReference = 1E686FD1A4D5B684D66A863DC8728D86 /* FRCircleSlider.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B85CB892CEF04B552BE4A3E6FEFCB85D /* Pods-FRCircleSlider_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA7FC30D2CDE753A3DFB11549210F4A3 /* Build configuration list for PBXNativeTarget "Pods-FRCircleSlider_Example" */;
+			buildPhases = (
+				B2225BC5573A71CC09A4AC642F600500 /* Sources */,
+				B284A44185F699CCB931C902FD8F76B2 /* Frameworks */,
+				48B0285EB5FD531FFEA9A7499CD312C6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9DFBDD3F98379794559C996EC9FA74B6 /* PBXTargetDependency */,
+			);
+			name = "Pods-FRCircleSlider_Example";
+			productName = "Pods-FRCircleSlider_Example";
+			productReference = EB7D281AD1986DA2DA4913A5ECFA1E75 /* Pods_FRCircleSlider_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = A235AF184D957CCC7567A6C3B260C77E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC5F08483F3AA9A5C353830E2D0F565E /* FRCircleSlider */,
+				B85CB892CEF04B552BE4A3E6FEFCB85D /* Pods-FRCircleSlider_Example */,
+				6490773BBCA5009ED803737F9F0553D2 /* Pods-FRCircleSlider_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		750C49BC2F597F1B55100CC4BBDE1063 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFED69C27739AF7F7D80B6524E230CAB /* Pods-FRCircleSlider_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2225BC5573A71CC09A4AC642F600500 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C1676ADA272525AB54C98A2D50CE3B4 /* Pods-FRCircleSlider_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C88612E4EAECB3D25EFB4C2430F17590 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83BAC930485B7A2E81776E64824BA9AD /* FRCircleSlider-dummy.m in Sources */,
+				B2A1788326FF46457B348F8CC926384A /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9DFBDD3F98379794559C996EC9FA74B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FRCircleSlider;
+			target = AC5F08483F3AA9A5C353830E2D0F565E /* FRCircleSlider */;
+			targetProxy = 1C81CC9744FA2509910646D2762253FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2A73483645ECBDA8F16EA743CD9349A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96F49F5D9E92DD4D78A044B83F594D21 /* Pods-FRCircleSlider_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FRCircleSlider_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FRCircleSlider_Tests/Pods-FRCircleSlider_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FRCircleSlider_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		345CC476DF4A7516DBD2220CF5035FF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		5B435FECFACAFDA4AF3C7BC654A7B097 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66C35812580F8AA755543BE2DF97C6FA /* Pods-FRCircleSlider_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FRCircleSlider_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FRCircleSlider_Tests/Pods-FRCircleSlider_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FRCircleSlider_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		980CD87D6CF936FF2870F7703474F75D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 273CEC18CBE699DE22B6999D7405EE39 /* FRCircleSlider.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FRCircleSlider/FRCircleSlider-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FRCircleSlider/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FRCircleSlider/FRCircleSlider.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = FRCircleSlider;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DAA0FDC22199542994D6C131DA673435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA06113759FC07D560A10BDD3C3A00E9 /* Pods-FRCircleSlider_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FRCircleSlider_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FRCircleSlider_Example/Pods-FRCircleSlider_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FRCircleSlider_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EA9F5335E71D126949DDF28F860EF78D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBCDA4194C1E757393908C19D8B5D2E4 /* Pods-FRCircleSlider_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FRCircleSlider_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FRCircleSlider_Example/Pods-FRCircleSlider_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FRCircleSlider_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FD33ACCD01A63C899BC091836A65B165 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 273CEC18CBE699DE22B6999D7405EE39 /* FRCircleSlider.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FRCircleSlider/FRCircleSlider-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FRCircleSlider/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FRCircleSlider/FRCircleSlider.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FRCircleSlider;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F2C655BE7D749E91B494E5D8085B171 /* Build configuration list for PBXNativeTarget "Pods-FRCircleSlider_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B435FECFACAFDA4AF3C7BC654A7B097 /* Debug */,
+				2A73483645ECBDA8F16EA743CD9349A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				345CC476DF4A7516DBD2220CF5035FF3 /* Debug */,
+				717E77604BFBB04BEAF56608A1CB2EDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA7FC30D2CDE753A3DFB11549210F4A3 /* Build configuration list for PBXNativeTarget "Pods-FRCircleSlider_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAA0FDC22199542994D6C131DA673435 /* Debug */,
+				EA9F5335E71D126949DDF28F860EF78D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8853781786B4136CE2F02603D7B27A4 /* Build configuration list for PBXNativeTarget "FRCircleSlider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				980CD87D6CF936FF2870F7703474F75D /* Debug */,
+				FD33ACCD01A63C899BC091836A65B165 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

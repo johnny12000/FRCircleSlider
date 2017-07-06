@@ -1,0 +1,22 @@
+{
+  "name": "FRCircleSlider",
+  "version": "0.1.0",
+  "summary": "A short description of FRCircleSlider.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/johnny12000/FRCircleSlider",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "johnny12000": "ristic.nikola@icloud.com"
+  },
+  "source": {
+    "git": "https://github.com/johnny12000/FRCircleSlider.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "FRCircleSlider/Classes/**/*"
+}

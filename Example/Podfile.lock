@@ -1,0 +1,16 @@
+PODS:
+  - FRCircleSlider (0.1.0)
+
+DEPENDENCIES:
+  - FRCircleSlider (from `../`)
+
+EXTERNAL SOURCES:
+  FRCircleSlider:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FRCircleSlider: 334c5c8f81b4400e9ee8d57b0b07b0ca669c55aa
+
+PODFILE CHECKSUM: cdafdaabdf83aa90af054873f34541088ad9c78a
+
+COCOAPODS: 1.2.1
