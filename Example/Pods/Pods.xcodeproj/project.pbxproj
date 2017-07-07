@@ -13,7 +13,7 @@
 		7C1676ADA272525AB54C98A2D50CE3B4 /* Pods-FRCircleSlider_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F102E66777A421255BC7DE41B6D0AFE /* Pods-FRCircleSlider_Example-dummy.m */; };
 		83BAC930485B7A2E81776E64824BA9AD /* FRCircleSlider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EBD37C9F8AF8E5895CBF18620433183B /* FRCircleSlider-dummy.m */; };
 		AD901D057BFEB306EE1C0965A9AE9AC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		B2A1788326FF46457B348F8CC926384A /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFAA67994769FC5C5E17D4AC3701F28 /* ReplaceMe.swift */; };
+		B2A1788326FF46457B348F8CC926384A /* FRCircleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFAA67994769FC5C5E17D4AC3701F28 /* FRCircleSlider.swift */; };
 		BFED69C27739AF7F7D80B6524E230CAB /* Pods-FRCircleSlider_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 860D4188B731094A145C0A0BE738C067 /* Pods-FRCircleSlider_Tests-dummy.m */; };
 		E5E32EE5B74F411A28CF7B3B6C54644B /* Pods-FRCircleSlider_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 957C5C2D382565A7D1DA17755DD7ADD0 /* Pods-FRCircleSlider_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F63EA6BCD5767A59A202B0801243BC91 /* Pods-FRCircleSlider_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C90732E3B886957F175D71C717C04711 /* Pods-FRCircleSlider_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,9 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		059BFF900783657024BAC44F75BEEA01 /* Pods_FRCircleSlider_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FRCircleSlider_Tests.framework; path = "Pods-FRCircleSlider_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		059BFF900783657024BAC44F75BEEA01 /* Pods_FRCircleSlider_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FRCircleSlider_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FBC51D04314BC0B3E45D9D699FDC3A /* Pods-FRCircleSlider_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FRCircleSlider_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		1E686FD1A4D5B684D66A863DC8728D86 /* FRCircleSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FRCircleSlider.framework; path = FRCircleSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E686FD1A4D5B684D66A863DC8728D86 /* FRCircleSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FRCircleSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F102E66777A421255BC7DE41B6D0AFE /* Pods-FRCircleSlider_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FRCircleSlider_Example-dummy.m"; sourceTree = "<group>"; };
 		273CEC18CBE699DE22B6999D7405EE39 /* FRCircleSlider.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FRCircleSlider.xcconfig; sourceTree = "<group>"; };
 		30ABE820A842501C9C9D01216F7834F4 /* Pods-FRCircleSlider_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FRCircleSlider_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -46,20 +46,20 @@
 		638479E44DB8E6B7FAD46188547C6035 /* Pods-FRCircleSlider_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FRCircleSlider_Example-resources.sh"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		66C35812580F8AA755543BE2DF97C6FA /* Pods-FRCircleSlider_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FRCircleSlider_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		6E149703797912D3335EC7DD88BEB81C /* Pods-FRCircleSlider_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FRCircleSlider_Example.modulemap"; sourceTree = "<group>"; };
+		6E149703797912D3335EC7DD88BEB81C /* Pods-FRCircleSlider_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FRCircleSlider_Example.modulemap"; sourceTree = "<group>"; };
 		709574413C94ACB0C8ECA60C935E294C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7FFAA67994769FC5C5E17D4AC3701F28 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		7FFAA67994769FC5C5E17D4AC3701F28 /* FRCircleSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FRCircleSlider.swift; sourceTree = "<group>"; };
 		860D4188B731094A145C0A0BE738C067 /* Pods-FRCircleSlider_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FRCircleSlider_Tests-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		957C5C2D382565A7D1DA17755DD7ADD0 /* Pods-FRCircleSlider_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FRCircleSlider_Tests-umbrella.h"; sourceTree = "<group>"; };
 		96F49F5D9E92DD4D78A044B83F594D21 /* Pods-FRCircleSlider_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FRCircleSlider_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B55385D1CA6C7C6A4A24CC6018979D2D /* FRCircleSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FRCircleSlider.modulemap; sourceTree = "<group>"; };
+		B55385D1CA6C7C6A4A24CC6018979D2D /* FRCircleSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FRCircleSlider.modulemap; sourceTree = "<group>"; };
 		C90732E3B886957F175D71C717C04711 /* Pods-FRCircleSlider_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FRCircleSlider_Example-umbrella.h"; sourceTree = "<group>"; };
 		CA06113759FC07D560A10BDD3C3A00E9 /* Pods-FRCircleSlider_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FRCircleSlider_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D0B4753EFD9FD9CE77705769DFF2B3A4 /* FRCircleSlider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FRCircleSlider-prefix.pch"; sourceTree = "<group>"; };
 		D510D8B5D73DCAC4B46CEA33BF539BBD /* FRCircleSlider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FRCircleSlider-umbrella.h"; sourceTree = "<group>"; };
-		D7EBC1076011B89330E6EE5CDA209616 /* Pods-FRCircleSlider_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FRCircleSlider_Tests.modulemap"; sourceTree = "<group>"; };
-		EB7D281AD1986DA2DA4913A5ECFA1E75 /* Pods_FRCircleSlider_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FRCircleSlider_Example.framework; path = "Pods-FRCircleSlider_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7EBC1076011B89330E6EE5CDA209616 /* Pods-FRCircleSlider_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FRCircleSlider_Tests.modulemap"; sourceTree = "<group>"; };
+		EB7D281AD1986DA2DA4913A5ECFA1E75 /* Pods_FRCircleSlider_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FRCircleSlider_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBCDA4194C1E757393908C19D8B5D2E4 /* Pods-FRCircleSlider_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FRCircleSlider_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EBD37C9F8AF8E5895CBF18620433183B /* FRCircleSlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FRCircleSlider-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,9 +122,8 @@
 		5E82A8C5A0AB9E9600B868207C89B136 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7FFAA67994769FC5C5E17D4AC3701F28 /* ReplaceMe.swift */,
+				7FFAA67994769FC5C5E17D4AC3701F28 /* FRCircleSlider.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -180,7 +179,6 @@
 			children = (
 				5E82A8C5A0AB9E9600B868207C89B136 /* Classes */,
 			);
-			name = FRCircleSlider;
 			path = FRCircleSlider;
 			sourceTree = "<group>";
 		};
@@ -356,7 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83BAC930485B7A2E81776E64824BA9AD /* FRCircleSlider-dummy.m in Sources */,
-				B2A1788326FF46457B348F8CC926384A /* ReplaceMe.swift in Sources */,
+				B2A1788326FF46457B348F8CC926384A /* FRCircleSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
