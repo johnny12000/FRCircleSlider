@@ -33,19 +33,6 @@ open class FRCircleSlider: UIControl {
     }
 
     var value2: CGFloat = 0.5
-    //        {
-    //        willSet(value) {
-    //            if(value != value2) {
-    //                let diff = value2 - value1
-    //                var newAngle = value - diff;
-    //                if(newAngle < 0) {
-    //                    newAngle = 1 + newAngle
-    //                }
-    //                angle = newAngle
-    //                rotateMovingView()
-    //            }
-    //        }
-    //    }
 
     var dot1Layer: CALayer?
     var dot2Layer: CALayer?
@@ -157,9 +144,6 @@ open class FRCircleSlider: UIControl {
     // MARK: - Draw elements
 
     override open func draw(_ rect: CGRect) {
-
-        //self.layer.sublayers = nil
-
         self.drawText(rect)
         self.drawProgressBackCircle(rect)
         self.drawTimeLines(rect)
