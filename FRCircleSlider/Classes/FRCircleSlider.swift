@@ -51,56 +51,40 @@ open class FRCircleSlider: UIControl {
         point = CGPoint(x: 0, y: 0)
         movingView = UIView(frame: frame)
         super.init(frame: frame)
-        self.backgroundColor = UIColor.clear
-        self.tintColor = UIColor.white
-        self.addSubview(movingView!)
+        controlSetup()
     }
 
     required public init?(coder aDecoder: NSCoder) {
         point = CGPoint(x: 0, y: 0)
         movingView = UIView(coder:aDecoder)
-        movingView?.backgroundColor = UIColor.red
         super.init(coder: aDecoder)
-        self.backgroundColor = UIColor.clear
-        self.tintColor = UIColor.white
+        controlSetup()
+    }
 
-        self.translatesAutoresizingMaskIntoConstraints = false
+    func controlSetup() {
+        backgroundColor = UIColor.clear
+        tintColor = UIColor.white
+
+        translatesAutoresizingMaskIntoConstraints = false
         movingView = UIView(frame: frame)
         movingView?.isUserInteractionEnabled = false
         movingView?.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(movingView!)
-        self.addConstraint(NSLayoutConstraint(item: movingView!,
-                                              attribute: NSLayoutAttribute.width,
-                                              relatedBy: NSLayoutRelation.equal,
-                                              toItem: self,
-                                              attribute: NSLayoutAttribute.width,
-                                              multiplier: 1,
-                                              constant: 0))
+        addSubview(movingView!)
+        addConstraint(
+            NSLayoutConstraint(item: movingView!, attribute: .width, relatedBy: .equal,
+                               toItem: self, attribute: .width, multiplier: 1, constant: 0))
 
-        self.addConstraint(NSLayoutConstraint(item: movingView!,
-                                              attribute: NSLayoutAttribute.height,
-                                              relatedBy: NSLayoutRelation.equal,
-                                              toItem: self,
-                                              attribute: NSLayoutAttribute.height,
-                                              multiplier: 1,
-                                              constant: 0))
+        addConstraint(
+            NSLayoutConstraint(item: movingView!, attribute: .height, relatedBy: .equal,
+                               toItem: self, attribute: .height, multiplier: 1, constant: 0))
 
-        self.addConstraint(NSLayoutConstraint(item: movingView!,
-                                              attribute: NSLayoutAttribute.centerX,
-                                              relatedBy: NSLayoutRelation.equal,
-                                              toItem: self,
-                                              attribute: NSLayoutAttribute.centerX,
-                                              multiplier: 1,
-                                              constant: 0))
+        addConstraint(
+            NSLayoutConstraint(item: movingView!, attribute: .centerX, relatedBy: .equal,
+                               toItem: self, attribute: .centerX, multiplier: 1, constant: 0))
 
-        self.addConstraint(NSLayoutConstraint(item: movingView!,
-                                              attribute: NSLayoutAttribute.centerY,
-                                              relatedBy: NSLayoutRelation.equal,
-                                              toItem: self,
-                                              attribute: NSLayoutAttribute.centerY,
-                                              multiplier: 1,
-                                              constant: 0))
-
+        addConstraint(
+            NSLayoutConstraint(item: movingView!, attribute: .centerY, relatedBy: .equal,
+                               toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
     }
 
     override open func layoutSubviews() {
