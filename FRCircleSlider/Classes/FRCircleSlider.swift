@@ -11,10 +11,10 @@ import GLKit
 @IBDesignable
 open class FRCircleSlider: UIControl {
 
-    @IBInspectable let selectedColor = UIColor.blue
-    @IBInspectable let dotColor = UIColor.red
-    @IBInspectable let connectorColor = UIColor.yellow
-    @IBInspectable let textFont = UIFont.systemFont(ofSize: 12)
+    @IBInspectable var selectedColor: UIColor = UIColor.blue
+    @IBInspectable var dotColor: UIColor = UIColor.red
+    @IBInspectable var connectorColor: UIColor = UIColor.yellow
+    @IBInspectable var textFont: UIFont = UIFont.systemFont(ofSize: 12)
 
     var circleRadius: CGFloat = 250
     var lineWidth: CGFloat = 1
@@ -25,7 +25,7 @@ open class FRCircleSlider: UIControl {
 
     var value1: CGFloat = 0.1 {
         willSet(value) {
-            if(value != value1) {
+            if value != value1 {
                 getViewAngleFromValue(value)
                 rotateMovingView()
             }
@@ -274,7 +274,9 @@ open class FRCircleSlider: UIControl {
         let Y = CGFloat(0)
         let arcRadius: CGFloat = circleRadius
         let color = connectorColor
-        let pathBottom = UIBezierPath(ovalIn: CGRect(x: (X - (arcRadius/2)), y: (Y - (arcRadius/2)), width: arcRadius, height: arcRadius))
+        let pathBottom = UIBezierPath(
+            ovalIn: CGRect(x: (X - (arcRadius/2)), y: (Y - (arcRadius/2)),
+                           width: arcRadius, height: arcRadius))
 
         let connector = CAShapeLayer()
         connector.lineWidth = connectorWidth
@@ -300,7 +302,9 @@ open class FRCircleSlider: UIControl {
         let X = self.bounds.midX
         let Y = self.bounds.midY
         let arcRadius: CGFloat = circleRadius
-        let pathBottom = UIBezierPath(ovalIn: CGRect(x: (X - (arcRadius/2)), y: (Y - (arcRadius/2)), width: arcRadius, height: arcRadius))
+        let pathBottom = UIBezierPath(
+            ovalIn: CGRect(x: (X - (arcRadius/2)), y: (Y - (arcRadius/2)),
+                           width: arcRadius, height: arcRadius))
 
         let arc = CAShapeLayer()
         arc.lineWidth = lineWidth
@@ -331,9 +335,9 @@ open class FRCircleSlider: UIControl {
     func getViewAngle(_ val: CGPoint) {
         let rect = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
 
-        if(selectedLayer == dot1Layer) {
+        if selectedLayer == dot1Layer {
             angle = self.getAngle(val, layer: dot1Layer!, rect: rect)
-        } else if(selectedLayer == dot2Layer) {
+        } else if selectedLayer == dot2Layer {
             let angle2 = self.getAngle(val, layer: dot2Layer!, rect: rect)
             let currentValue = radiansToValue(angle2)
             let diff = value1 - value2
@@ -349,20 +353,20 @@ open class FRCircleSlider: UIControl {
         var newValue1 = self.radiansToValue(angle)
         var diff: CGFloat = value2 - value1
 
-        if(diff < 0) {
+        if diff < 0 {
             diff = 1 + diff
         }
 
-        if (newValue1 < 0) {
+        if newValue1 < 0 {
             newValue1 += 1
-        } else if (newValue1 > 1) {
+        } else if newValue1 > 1 {
             newValue1 -= 1
         }
 
         var newValue2 = newValue1 + diff
-        if (newValue2 < 0) {
+        if newValue2 < 0 {
             newValue2 += 1
-        } else if (newValue2 > 1) {
+        } else if newValue2 > 1 {
             newValue2 -= 1
         }
 
