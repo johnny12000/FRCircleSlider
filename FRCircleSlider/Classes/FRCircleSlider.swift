@@ -14,7 +14,6 @@ open class FRCircleSlider: UIControl {
     @IBInspectable var selectedColor: UIColor = UIColor.blue
     @IBInspectable var dotColor: UIColor = UIColor.red
     @IBInspectable var connectorColor: UIColor = UIColor.yellow
-    @IBInspectable var textFont: UIFont = UIFont.systemFont(ofSize: 12)
 
     var circleRadius: CGFloat = 250
     var lineWidth: CGFloat = 1
@@ -37,11 +36,8 @@ open class FRCircleSlider: UIControl {
     var dot1Layer: CALayer?
     var dot2Layer: CALayer?
     var connectorLayer: CAShapeLayer?
-
     var selectedLayer: CALayer?
-
     var point: CGPoint?
-
     var movingView: UIView?
     var angle: CGFloat = 0.1
 
@@ -70,21 +66,15 @@ open class FRCircleSlider: UIControl {
         movingView?.isUserInteractionEnabled = false
         movingView?.translatesAutoresizingMaskIntoConstraints = false
         addSubview(movingView!)
-        addConstraint(
+        addConstraints([
             NSLayoutConstraint(item: movingView!, attribute: .width, relatedBy: .equal,
-                               toItem: self, attribute: .width, multiplier: 1, constant: 0))
-
-        addConstraint(
+                               toItem: self, attribute: .width, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: movingView!, attribute: .height, relatedBy: .equal,
-                               toItem: self, attribute: .height, multiplier: 1, constant: 0))
-
-        addConstraint(
+                               toItem: self, attribute: .height, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: movingView!, attribute: .centerX, relatedBy: .equal,
-                               toItem: self, attribute: .centerX, multiplier: 1, constant: 0))
-
-        addConstraint(
+                               toItem: self, attribute: .centerX, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: movingView!, attribute: .centerY, relatedBy: .equal,
-                               toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
+                               toItem: self, attribute: .centerY, multiplier: 1, constant: 0)])
     }
 
     override open func layoutSubviews() {
@@ -153,29 +143,17 @@ open class FRCircleSlider: UIControl {
         let text3Size = text3.size(attributes: attributes)
         let text4Size = text4.size(attributes: attributes)
 
-        let text1Rect = CGRect(
-            x: rect.maxX - text1Size.width,
-            y: rect.midY - text1Size.height/2,
-            width: text1Size.width,
-            height: text1Size.height)
+        let text1Rect = CGRect(x: rect.maxX - text1Size.width, y: rect.midY - text1Size.height/2,
+                               width: text1Size.width, height: text1Size.height)
 
-        let text2Rect = CGRect(
-            x: rect.midX - text2Size.width/2,
-            y: rect.maxY - text2Size.height,
-            width: text2Size.width,
-            height: text2Size.height)
+        let text2Rect = CGRect(x: rect.midX - text2Size.width/2, y: rect.maxY - text2Size.height,
+                               width: text2Size.width, height: text2Size.height)
 
-        let text3Rect = CGRect(
-            x: rect.minX,
-            y: rect.midY - text3Size.height/2,
-            width: text3Size.width,
-            height: text3Size.height)
+        let text3Rect = CGRect(x: rect.minX, y: rect.midY - text3Size.height/2,
+                               width: text3Size.width, height: text3Size.height)
 
-        let text4Rect = CGRect(
-            x: rect.midX - text4Size.width/2,
-            y: rect.minY,
-            width: text4Size.width,
-            height: text4Size.height)
+        let text4Rect = CGRect(x: rect.midX - text4Size.width/2, y: rect.minY,
+                               width: text4Size.width, height: text4Size.height)
 
         text1.draw(in: text1Rect, withAttributes: attributes)
         text2.draw(in: text2Rect, withAttributes: attributes)
@@ -275,8 +253,7 @@ open class FRCircleSlider: UIControl {
         let arcRadius: CGFloat = circleRadius
         let color = connectorColor
         let pathBottom = UIBezierPath(
-            ovalIn: CGRect(x: (X - (arcRadius/2)), y: (Y - (arcRadius/2)),
-                           width: arcRadius, height: arcRadius))
+            ovalIn: CGRect(x: (X - (arcRadius/2)), y: (Y - (arcRadius/2)), width: arcRadius, height: arcRadius))
 
         let connector = CAShapeLayer()
         connector.lineWidth = connectorWidth
@@ -303,8 +280,7 @@ open class FRCircleSlider: UIControl {
         let Y = self.bounds.midY
         let arcRadius: CGFloat = circleRadius
         let pathBottom = UIBezierPath(
-            ovalIn: CGRect(x: (X - (arcRadius/2)), y: (Y - (arcRadius/2)),
-                           width: arcRadius, height: arcRadius))
+            ovalIn: CGRect(x: (X - (arcRadius/2)), y: (Y - (arcRadius/2)), width: arcRadius, height: arcRadius))
 
         let arc = CAShapeLayer()
         arc.lineWidth = lineWidth
@@ -375,7 +351,7 @@ open class FRCircleSlider: UIControl {
     }
 
     func calculateElementSizes() {
-        self.circleRadius = min(self.frame.height, self.frame.width) * 0.6
+        circleRadius = min(self.frame.height, self.frame.width) * 0.6
     }
 
     func getAngle(_ point: CGPoint, layer: CALayer, rect: CGRect) -> CGFloat {
@@ -417,5 +393,4 @@ open class FRCircleSlider: UIControl {
             self.movingView?.layer.setAffineTransform(CGAffineTransform.identity.rotated(by: self.angle))
         })
     }
-
 }
