@@ -38,7 +38,7 @@ open class FRCircleSlider: UIControl {
     var connectorLayer: CAShapeLayer?
     var selectedLayer: CALayer?
     var point: CGPoint?
-    var movingView: UIView?
+    var movingView: UIView!
     var angle: CGFloat = 0.1
 
     // MARK: - Initialization
@@ -63,24 +63,24 @@ open class FRCircleSlider: UIControl {
 
         translatesAutoresizingMaskIntoConstraints = false
         movingView = UIView(frame: frame)
-        movingView?.isUserInteractionEnabled = false
-        movingView?.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(movingView!)
+        movingView.isUserInteractionEnabled = false
+        movingView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(movingView)
         addConstraints([
-            NSLayoutConstraint(item: movingView!, attribute: .width, relatedBy: .equal,
+            NSLayoutConstraint(item: movingView, attribute: .width, relatedBy: .equal,
                                toItem: self, attribute: .width, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: movingView!, attribute: .height, relatedBy: .equal,
+            NSLayoutConstraint(item: movingView, attribute: .height, relatedBy: .equal,
                                toItem: self, attribute: .height, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: movingView!, attribute: .centerX, relatedBy: .equal,
+            NSLayoutConstraint(item: movingView, attribute: .centerX, relatedBy: .equal,
                                toItem: self, attribute: .centerX, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: movingView!, attribute: .centerY, relatedBy: .equal,
+            NSLayoutConstraint(item: movingView, attribute: .centerY, relatedBy: .equal,
                                toItem: self, attribute: .centerY, multiplier: 1, constant: 0)])
     }
 
     override open func layoutSubviews() {
         calculateElementSizes()
         super.layoutSubviews()
-        self.bringSubview(toFront: movingView!)
+        self.bringSubview(toFront: movingView)
     }
 
     // MARK: - Tracking user actions
@@ -124,7 +124,7 @@ open class FRCircleSlider: UIControl {
         self.drawConnector(rect)
         self.drawDot1(rect)
         self.drawDot2(rect)
-        self.bringSubview(toFront: movingView!)
+        self.bringSubview(toFront: movingView)
         rotateMovingView()
     }
 
@@ -201,7 +201,7 @@ open class FRCircleSlider: UIControl {
     func drawDot1(_ rect: CGRect) {
         let angle = CGFloat(0)
         dot1Layer = drawDot(angle, rect:rect, color: UIColor.blue)
-        movingView?.layer.addSublayer(dot1Layer!)
+        movingView.layer.addSublayer(dot1Layer!)
     }
 
     func drawDot2(_ rect: CGRect) {
@@ -212,7 +212,7 @@ open class FRCircleSlider: UIControl {
 
         let angle = valueToRadians(diff)
         dot2Layer = drawDot(angle, rect: rect, color: UIColor.orange)
-        movingView?.layer.addSublayer(dot2Layer!)
+        movingView.layer.addSublayer(dot2Layer!)
     }
 
     func drawDot(_ angle: CGFloat, rect: CGRect, color: UIColor) -> CALayer {
@@ -270,9 +270,9 @@ open class FRCircleSlider: UIControl {
 
         rotateConnector(connector, forAngle: angle)
 
-        movingView?.layer.addSublayer(connector)
+        movingView.layer.addSublayer(connector)
         connectorLayer = connector
-        movingView?.setNeedsLayout()
+        movingView.setNeedsLayout()
     }
 
     func drawProgressBackCircle(_ rect: CGRect) {
@@ -390,7 +390,7 @@ open class FRCircleSlider: UIControl {
 
     func rotateMovingView() {
         UIView.animate(withDuration: 0.1, animations: {
-            self.movingView?.layer.setAffineTransform(CGAffineTransform.identity.rotated(by: self.angle))
+            self.movingView.layer.setAffineTransform(CGAffineTransform.identity.rotated(by: self.angle))
         })
     }
 }
