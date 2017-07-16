@@ -12,7 +12,8 @@ import GLKit
 open class FRCircleSlider: UIControl {
 
     @IBInspectable var selectedColor: UIColor = UIColor.blue
-    @IBInspectable var dotColor: UIColor = UIColor.red
+    @IBInspectable var firstDotColor: UIColor = UIColor.gray
+    @IBInspectable var secondDotColor: UIColor = UIColor.gray
     @IBInspectable var connectorColor: UIColor = UIColor.yellow
 
     var circleRadius: CGFloat = 250
@@ -200,7 +201,7 @@ open class FRCircleSlider: UIControl {
 
     func drawDot1(_ rect: CGRect) {
         let angle = CGFloat(0)
-        dot1Layer = drawDot(angle, rect:rect, color: UIColor.blue)
+        dot1Layer = drawDot(angle, rect:rect, color: firstDotColor)
         movingView.layer.addSublayer(dot1Layer!)
     }
 
@@ -211,7 +212,7 @@ open class FRCircleSlider: UIControl {
         }
 
         let angle = valueToRadians(diff)
-        dot2Layer = drawDot(angle, rect: rect, color: UIColor.orange)
+        dot2Layer = drawDot(angle, rect: rect, color: secondDotColor)
         movingView.layer.addSublayer(dot2Layer!)
     }
 
