@@ -59,8 +59,6 @@ open class FRCircleSlider: UIControl {
     }
 
     func controlSetup() {
-        backgroundColor = UIColor.clear
-        tintColor = UIColor.white
 
         translatesAutoresizingMaskIntoConstraints = false
         movingView = UIView(frame: frame)
@@ -119,84 +117,12 @@ open class FRCircleSlider: UIControl {
     // MARK: - Draw elements
 
     override open func draw(_ rect: CGRect) {
-        self.drawText(rect)
         self.drawProgressBackCircle(rect)
-        self.drawTimeLines(rect)
         self.drawConnector(rect)
         self.drawDot1(rect)
         self.drawDot2(rect)
         self.bringSubview(toFront: movingView)
         rotateMovingView()
-    }
-
-    func drawText(_ rect: CGRect) {
-
-        let text1 = "6"
-        let text2 = "12"
-        let text3 = "18"
-        let text4 = "24"
-
-        let attributes = [NSFontAttributeName: UIFont.systemFont(ofSize:12),
-                          NSForegroundColorAttributeName: UIColor.white]
-
-        let text1Size = text1.size(attributes: attributes)
-        let text2Size = text2.size(attributes: attributes)
-        let text3Size = text3.size(attributes: attributes)
-        let text4Size = text4.size(attributes: attributes)
-
-        let text1Rect = CGRect(x: rect.maxX - text1Size.width, y: rect.midY - text1Size.height/2,
-                               width: text1Size.width, height: text1Size.height)
-
-        let text2Rect = CGRect(x: rect.midX - text2Size.width/2, y: rect.maxY - text2Size.height,
-                               width: text2Size.width, height: text2Size.height)
-
-        let text3Rect = CGRect(x: rect.minX, y: rect.midY - text3Size.height/2,
-                               width: text3Size.width, height: text3Size.height)
-
-        let text4Rect = CGRect(x: rect.midX - text4Size.width/2, y: rect.minY,
-                               width: text4Size.width, height: text4Size.height)
-
-        text1.draw(in: text1Rect, withAttributes: attributes)
-        text2.draw(in: text2Rect, withAttributes: attributes)
-        text3.draw(in: text3Rect, withAttributes: attributes)
-        text4.draw(in: text4Rect, withAttributes: attributes)
-    }
-
-    func drawTimeLines(_ rect: CGRect) {
-        for i in 0...360/5 {
-            let angle: Float = Float(i*5)
-            drawLine(CGFloat(GLKMathDegreesToRadians(angle)), rect:rect)
-        }
-    }
-
-    func drawLine(_ angle: CGFloat, rect: CGRect) {
-        //create the path
-        let plusPath = UIBezierPath()
-
-        //set the path's line width to the height of the stroke
-        plusPath.lineWidth = lineWidth
-
-        //move the initial point of the path
-        //to the start of the horizontal stroke
-        plusPath.move(to: CGPoint(
-            x:circleRadius/2 + 20,
-            y:0))
-
-        //add a point to the path at the end of the stroke
-        plusPath.addLine(to: CGPoint(
-            x:circleRadius/2 + lineHeight + 20,
-            y:0))
-
-        //set the stroke color
-        tintColor.setStroke()
-
-        let rotate = CGAffineTransform(rotationAngle: angle)
-        let translate = CGAffineTransform(translationX: rect.width/2, y: rect.height/2)
-
-        plusPath.apply(rotate)
-        plusPath.apply(translate)
-        //draw the stroke
-        plusPath.stroke()
     }
 
     func drawDot1(_ rect: CGRect) {
@@ -352,7 +278,7 @@ open class FRCircleSlider: UIControl {
     }
 
     func calculateElementSizes() {
-        circleRadius = min(self.frame.height, self.frame.width) * 0.6
+        circleRadius = min(self.frame.height, self.frame.width) - arcRadius - lineWidth * 2
     }
 
     func getAngle(_ point: CGPoint, layer: CALayer, rect: CGRect) -> CGFloat {
