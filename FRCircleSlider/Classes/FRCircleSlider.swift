@@ -38,21 +38,18 @@ open class FRCircleSlider: UIControl {
     var dot2Layer: CALayer?
     var connectorLayer: CAShapeLayer?
     var selectedLayer: CALayer?
-    var point: CGPoint?
     var movingView: UIView!
     var angle: CGFloat = 0.1
 
     // MARK: - Initialization
 
     override init(frame: CGRect) {
-        point = CGPoint(x: 0, y: 0)
         movingView = UIView(frame: frame)
         super.init(frame: frame)
         controlSetup()
     }
 
     required public init?(coder aDecoder: NSCoder) {
-        point = CGPoint(x: 0, y: 0)
         movingView = UIView(coder:aDecoder)
         super.init(coder: aDecoder)
         controlSetup()
