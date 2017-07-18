@@ -23,7 +23,7 @@ open class FRCircleSlider: UIControl {
     var lineHeight: CGFloat = 10
     let arcRadius: CGFloat = 30
 
-    var value1: CGFloat = 0.1 {
+    public var value1: CGFloat = 0.1 {
         willSet(value) {
             if value != value1 {
                 getViewAngleFromValue(value)
@@ -32,14 +32,14 @@ open class FRCircleSlider: UIControl {
         }
     }
 
-    var value2: CGFloat = 0.5
+    public var value2: CGFloat = 0.5
 
     var dot1Layer: CALayer?
     var dot2Layer: CALayer?
     var connectorLayer: CAShapeLayer?
     var selectedLayer: CALayer?
     var movingView: UIView!
-    var angle: CGFloat = 0.1
+    var angle: CGFloat = 0.0
 
     // MARK: - Initialization
 
@@ -250,28 +250,12 @@ open class FRCircleSlider: UIControl {
     }
 
     func recalculate() {
-        var newValue1 = self.radiansToValue(angle)
-        var diff: CGFloat = value2 - value1
+        let diff = (value2 - value1).normalizeValue()
+        let newValue1 = self.radiansToValue(angle)
+        let newValue2 = newValue1 + diff
 
-        if diff < 0 {
-            diff = 1 + diff
-        }
-
-        if newValue1 < 0 {
-            newValue1 += 1
-        } else if newValue1 > 1 {
-            newValue1 -= 1
-        }
-
-        var newValue2 = newValue1 + diff
-        if newValue2 < 0 {
-            newValue2 += 1
-        } else if newValue2 > 1 {
-            newValue2 -= 1
-        }
-
-        value1 = newValue1
-        value2 = newValue2
+        value1 = newValue1.normalizeValue()
+        value2 = newValue2.normalizeValue()
     }
 
     func calculateElementSizes() {
@@ -294,17 +278,12 @@ open class FRCircleSlider: UIControl {
         let rect = self.frame
         let rotateAroundCircle = CATransform3DMakeRotation(angle, 0, 0, 1)
         let translateInViewCenter = CATransform3DMakeTranslation(
-            rect.width/2 - arcRadius/2,
-            rect.height/2 - arcRadius/2,
-            0)
-        let translateOnCircle = CATransform3DMakeTranslation(-arcRadius/2,
-                                                             -circleRadius/2,
-                                                             0)
+            rect.width/2 - arcRadius/2, rect.height/2 - arcRadius/2, 0)
+        let translateOnCircle = CATransform3DMakeTranslation(-arcRadius/2, -circleRadius/2, 0)
 
         layer.transform =
             CATransform3DConcat(
-                CATransform3DConcat(translateOnCircle, rotateAroundCircle),
-                translateInViewCenter)
+                CATransform3DConcat(translateOnCircle, rotateAroundCircle), translateInViewCenter)
     }
 
     func rotateConnector(_ layer: CALayer, forAngle angle: CGFloat) {

@@ -14,6 +14,7 @@
 		83BAC930485B7A2E81776E64824BA9AD /* FRCircleSlider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EBD37C9F8AF8E5895CBF18620433183B /* FRCircleSlider-dummy.m */; };
 		AD901D057BFEB306EE1C0965A9AE9AC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		B2A1788326FF46457B348F8CC926384A /* FRCircleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFAA67994769FC5C5E17D4AC3701F28 /* FRCircleSlider.swift */; };
+		B2CFA1281F1DF4FB00B5E134 /* CGUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CFA1271F1DF4FB00B5E134 /* CGUtilities.swift */; };
 		BFED69C27739AF7F7D80B6524E230CAB /* Pods-FRCircleSlider_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 860D4188B731094A145C0A0BE738C067 /* Pods-FRCircleSlider_Tests-dummy.m */; };
 		E5E32EE5B74F411A28CF7B3B6C54644B /* Pods-FRCircleSlider_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 957C5C2D382565A7D1DA17755DD7ADD0 /* Pods-FRCircleSlider_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F63EA6BCD5767A59A202B0801243BC91 /* Pods-FRCircleSlider_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C90732E3B886957F175D71C717C04711 /* Pods-FRCircleSlider_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -53,6 +54,7 @@
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		957C5C2D382565A7D1DA17755DD7ADD0 /* Pods-FRCircleSlider_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FRCircleSlider_Tests-umbrella.h"; sourceTree = "<group>"; };
 		96F49F5D9E92DD4D78A044B83F594D21 /* Pods-FRCircleSlider_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FRCircleSlider_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B2CFA1271F1DF4FB00B5E134 /* CGUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGUtilities.swift; sourceTree = "<group>"; };
 		B55385D1CA6C7C6A4A24CC6018979D2D /* FRCircleSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FRCircleSlider.modulemap; sourceTree = "<group>"; };
 		C90732E3B886957F175D71C717C04711 /* Pods-FRCircleSlider_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FRCircleSlider_Example-umbrella.h"; sourceTree = "<group>"; };
 		CA06113759FC07D560A10BDD3C3A00E9 /* Pods-FRCircleSlider_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FRCircleSlider_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				7FFAA67994769FC5C5E17D4AC3701F28 /* FRCircleSlider.swift */,
+				B2CFA1271F1DF4FB00B5E134 /* CGUtilities.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 			files = (
 				83BAC930485B7A2E81776E64824BA9AD /* FRCircleSlider-dummy.m in Sources */,
 				B2A1788326FF46457B348F8CC926384A /* FRCircleSlider.swift in Sources */,
+				B2CFA1281F1DF4FB00B5E134 /* CGUtilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

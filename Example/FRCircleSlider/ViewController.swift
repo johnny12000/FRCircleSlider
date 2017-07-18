@@ -7,12 +7,23 @@
 //
 
 import UIKit
+import FRCircleSlider
 
 class ViewController: UIViewController {
 
+    @IBOutlet var circleSlider: FRCircleSlider!
+
+    @IBOutlet var value1: UILabel!
+    @IBOutlet var value2: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        valueChanged(self)
+    }
+
+    @IBAction func valueChanged(_ sender: Any) {
+        value1.text = "Value1: \(circleSlider.value1)"
+        value2.text = "Value2: \(circleSlider.value2)"
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,4 +32,3 @@ class ViewController: UIViewController {
     }
 
 }
-
