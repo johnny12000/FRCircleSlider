@@ -9,7 +9,7 @@ import UIKit
 import GLKit
 
 @IBDesignable
-open class FRCircleSlider: UIControl {
+public class FRCircleSlider: UIControl {
 
     @IBInspectable var selectedColor: UIColor = UIColor.blue
     @IBInspectable var firstDotColor: UIColor = UIColor.gray
@@ -56,9 +56,7 @@ open class FRCircleSlider: UIControl {
     }
 
     func controlSetup() {
-
         translatesAutoresizingMaskIntoConstraints = false
-        movingView = UIView(frame: frame)
         movingView.isUserInteractionEnabled = false
         movingView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(movingView)
@@ -113,7 +111,7 @@ open class FRCircleSlider: UIControl {
 
     // MARK: - Draw elements
 
-    override open func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         self.drawProgressBackCircle(rect)
         self.drawConnector(rect)
         self.drawDot1(rect)
@@ -295,5 +293,14 @@ open class FRCircleSlider: UIControl {
         UIView.animate(withDuration: 0.1, animations: {
             self.movingView.layer.setAffineTransform(CGAffineTransform.identity.rotated(by: self.angle))
         })
+    }
+
+    override public var intrinsicContentSize: CGSize {
+        if frame.size == CGSize.zero {
+            let side = circleRadius + arcRadius + lineWidth * 2
+            return CGSize(width: side, height: side)
+        } else {
+            return frame.size
+        }
     }
 }
