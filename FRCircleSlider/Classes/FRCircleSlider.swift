@@ -56,9 +56,11 @@ public class FRCircleSlider: UIControl {
     }
 
     func controlSetup() {
+        clipsToBounds = true
         translatesAutoresizingMaskIntoConstraints = false
         movingView.isUserInteractionEnabled = false
         movingView.translatesAutoresizingMaskIntoConstraints = false
+        movingView.clipsToBounds = true
         addSubview(movingView)
         addConstraints([
             NSLayoutConstraint(item: movingView, attribute: .width, relatedBy: .equal,
@@ -302,5 +304,9 @@ public class FRCircleSlider: UIControl {
         } else {
             return frame.size
         }
+    }
+
+    public override func prepareForInterfaceBuilder() {
+        setNeedsLayout()
     }
 }
