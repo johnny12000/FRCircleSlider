@@ -44,18 +44,17 @@ public class FRCircleSlider: UIControl {
     // MARK: - Initialization
 
     override init(frame: CGRect) {
-        movingView = UIView(frame: frame)
         super.init(frame: frame)
         controlSetup()
     }
 
     required public init?(coder aDecoder: NSCoder) {
-        movingView = UIView(coder:aDecoder)
         super.init(coder: aDecoder)
         controlSetup()
     }
 
     func controlSetup() {
+        movingView = UIView(frame: frame)
         clipsToBounds = true
         translatesAutoresizingMaskIntoConstraints = false
         movingView.isUserInteractionEnabled = false
