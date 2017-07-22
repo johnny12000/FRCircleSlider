@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,14 +33,14 @@
                                     <action selector="valueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="8Wq-po-pfs"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8O0-EA-7Aq">
-                                <rect key="frame" x="166" y="463.5" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value1: 0.1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8O0-EA-7Aq">
+                                <rect key="frame" x="46" y="463.5" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgL-Ye-OU0">
-                                <rect key="frame" x="166" y="504.5" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value1: 0.5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgL-Ye-OU0">
+                                <rect key="frame" x="46" y="504.5" width="82.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -51,8 +52,8 @@
                             <constraint firstItem="8O0-EA-7Aq" firstAttribute="top" secondItem="4eY-Ab-AUw" secondAttribute="bottom" constant="20" id="EMc-dW-QYK"/>
                             <constraint firstItem="4eY-Ab-AUw" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Eup-Oy-sx8"/>
                             <constraint firstItem="kgL-Ye-OU0" firstAttribute="top" secondItem="8O0-EA-7Aq" secondAttribute="bottom" constant="20" id="NOp-1k-BuK"/>
-                            <constraint firstItem="kgL-Ye-OU0" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="T8G-Kr-uB9"/>
-                            <constraint firstItem="8O0-EA-7Aq" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="rDS-Qx-mjx"/>
+                            <constraint firstItem="kgL-Ye-OU0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="aKp-8M-D7r"/>
+                            <constraint firstItem="8O0-EA-7Aq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="hcJ-1D-l2Z"/>
                         </constraints>
                     </view>
                     <connections>
