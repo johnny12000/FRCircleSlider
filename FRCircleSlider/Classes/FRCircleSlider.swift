@@ -91,11 +91,12 @@ public class FRCircleSlider: UIControl {
             selectedLayer = nil
         }
 
+        super.beginTracking(touch, with: event)
         return selectedLayer != nil
     }
 
     override open func endTracking(_ touch: UITouch?, with event: UIEvent?) {
-
+        super.endTracking(touch, with: event)
     }
 
     override open func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
@@ -106,18 +107,17 @@ public class FRCircleSlider: UIControl {
             recalculate()
             self.sendActions(for: UIControlEvents.valueChanged)
         }
-
         return super.continueTracking(touch, with: event)
     }
 
     // MARK: - Draw elements
 
     override public func draw(_ rect: CGRect) {
-        self.drawProgressBackCircle(rect)
-        self.drawConnector(rect)
-        self.drawDot1(rect)
-        self.drawDot2(rect)
-        self.bringSubview(toFront: movingView)
+        drawProgressBackCircle(rect)
+        drawConnector(rect)
+        drawDot1(rect)
+        drawDot2(rect)
+        bringSubview(toFront: movingView)
         rotateMovingView()
     }
 
