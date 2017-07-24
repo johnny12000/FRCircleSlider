@@ -128,11 +128,7 @@ public class FRCircleSlider: UIControl {
     }
 
     func drawDot2(_ rect: CGRect) {
-        var diff = value2 - value1
-        if diff < 0 {
-            diff = 1 + diff
-        }
-
+        let diff = (value2 - value1).normalizeValue()
         let angle = valueToRadians(diff)
         dot2Layer = drawDot(angle, rect: rect, color: secondDotColor)
         movingView.layer.addSublayer(dot2Layer!)
@@ -161,14 +157,8 @@ public class FRCircleSlider: UIControl {
     }
 
     func drawConnector(_ rect: CGRect) {
-        var diff = value2 - value1
-
-        if diff < 0 {
-            diff = 1 + diff
-        }
-
+        var diff = (value2 - value1).normalizeValue()
         diff -= 0.02
-
         let angle = CGFloat(GLKMathDegreesToRadians(-90))
 
         let X = CGFloat(0)
