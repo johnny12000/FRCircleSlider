@@ -113,6 +113,7 @@ public class FRCircleSlider: UIControl {
     // MARK: - Draw elements
 
     override public func draw(_ rect: CGRect) {
+        super.draw(rect)
         drawProgressBackCircle(rect)
         drawConnector(rect)
         drawDot1(rect)
