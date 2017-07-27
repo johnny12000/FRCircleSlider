@@ -41,6 +41,8 @@ public class FRCircleSlider: UIControl {
     var movingView: UIView!
     var angle: CGFloat = 0.0
 
+    var hapticGenerator: NSObject?
+
     // MARK: - Initialization
 
     override init(frame: CGRect) {
@@ -70,6 +72,10 @@ public class FRCircleSlider: UIControl {
                                toItem: self, attribute: .centerX, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: movingView, attribute: .centerY, relatedBy: .equal,
                                toItem: self, attribute: .centerY, multiplier: 1, constant: 0)])
+
+        if #available(iOS 10, *) {
+            hapticGenerator = UISelectionFeedbackGenerator()
+        }
     }
 
     override open func layoutSubviews() {
@@ -105,6 +111,9 @@ public class FRCircleSlider: UIControl {
             getViewAngle(val)
             rotateMovingView()
             recalculate()
+            if #available(iOS 10, *) {
+                (hapticGenerator as? UISelectionFeedbackGenerator)?.selectionChanged()
+            }
             self.sendActions(for: UIControlEvents.valueChanged)
         }
         return super.continueTracking(touch, with: event)
