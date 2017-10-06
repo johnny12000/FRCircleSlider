@@ -9,12 +9,12 @@ import UIKit
 import GLKit
 
 @IBDesignable
-public class FRCircleSlider: UIControl {
+open class FRCircleSlider: UIControl {
 
-    @IBInspectable var selectedColor: UIColor = UIColor.blue
-    @IBInspectable var firstDotColor: UIColor = UIColor.gray
-    @IBInspectable var secondDotColor: UIColor = UIColor.gray
-    @IBInspectable var connectorColor: UIColor = UIColor.yellow
+    @IBInspectable public var selectedColor: UIColor = UIColor.blue
+    @IBInspectable public var firstDotColor: UIColor = UIColor.gray
+    @IBInspectable public var secondDotColor: UIColor = UIColor.gray
+    @IBInspectable public var connectorColor: UIColor = UIColor.yellow
 
     var circleRadius: CGFloat = 250
     var lineWidth: CGFloat = 1
@@ -45,7 +45,7 @@ public class FRCircleSlider: UIControl {
 
     // MARK: - Initialization
 
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         controlSetup()
     }
@@ -112,7 +112,7 @@ public class FRCircleSlider: UIControl {
             rotateMovingView()
             recalculate()
             if #available(iOS 10, *) {
-                (hapticGenerator as? UISelectionFeedbackGenerator)?.selectionChanged()
+                //(hapticGenerator as? UISelectionFeedbackGenerator)?.selectionChanged()
             }
             self.sendActions(for: UIControlEvents.valueChanged)
         }
@@ -121,7 +121,7 @@ public class FRCircleSlider: UIControl {
 
     // MARK: - Draw elements
 
-    override public func draw(_ rect: CGRect) {
+    override open func draw(_ rect: CGRect) {
         super.draw(rect)
         drawProgressBackCircle(rect)
         drawConnector(rect)
@@ -296,7 +296,7 @@ public class FRCircleSlider: UIControl {
         })
     }
 
-    override public var intrinsicContentSize: CGSize {
+    override open var intrinsicContentSize: CGSize {
         if frame.size == CGSize.zero {
             let side = circleRadius + arcRadius + lineWidth * 2
             return CGSize(width: side, height: side)
@@ -305,7 +305,7 @@ public class FRCircleSlider: UIControl {
         }
     }
 
-    public override func prepareForInterfaceBuilder() {
+    open override func prepareForInterfaceBuilder() {
         setNeedsLayout()
     }
 }
