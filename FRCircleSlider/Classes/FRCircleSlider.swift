@@ -23,10 +23,12 @@ open class FRCircleSlider: UIControl {
     var lineHeight: CGFloat = 10
     let arcRadius: CGFloat = 30
 
+    var touchBegin: CGPoint?
+
     public var value1: CGFloat = 0.1 {
         willSet(value) {
             if value != value1 {
-                getViewAngleFromValue(value)
+                angle = value.convertValueToRadians()
                 rotateMovingView()
             }
         }
@@ -34,14 +36,17 @@ open class FRCircleSlider: UIControl {
 
     public var value2: CGFloat = 0.5
 
-    var dot1Layer: CALayer?
-    var dot2Layer: CALayer?
-    var connectorLayer: CAShapeLayer?
-    var selectedLayer: CALayer?
+    var dot1Layer: CALayer!
+    var dot2Layer: CALayer!
+    var connectorLayer: CAShapeLayer!
     var movingView: UIView!
     var angle: CGFloat = 0.0
 
     var hapticGenerator: NSObject?
+
+    var endpointsDifference: CGFloat {
+        return (value2 - value1).normalizeValue()
+    }
 
     // MARK: - Initialization
 
@@ -63,15 +68,13 @@ open class FRCircleSlider: UIControl {
         movingView.translatesAutoresizingMaskIntoConstraints = false
         movingView.clipsToBounds = true
         addSubview(movingView)
+        bringSubview(toFront: movingView)
         addConstraints([
-            NSLayoutConstraint(item: movingView, attribute: .width, relatedBy: .equal,
-                               toItem: self, attribute: .width, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: movingView, attribute: .height, relatedBy: .equal,
-                               toItem: self, attribute: .height, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: movingView, attribute: .centerX, relatedBy: .equal,
-                               toItem: self, attribute: .centerX, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: movingView, attribute: .centerY, relatedBy: .equal,
-                               toItem: self, attribute: .centerY, multiplier: 1, constant: 0)])
+            movingView.widthAnchor.constraint(equalTo: widthAnchor),
+            movingView.heightAnchor.constraint(equalTo: heightAnchor),
+            movingView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            movingView.centerYAnchor.constraint(equalTo: centerYAnchor)
+        ])
 
         if #available(iOS 10, *) {
             hapticGenerator = UISelectionFeedbackGenerator()
@@ -81,32 +84,35 @@ open class FRCircleSlider: UIControl {
     override open func layoutSubviews() {
         calculateElementSizes()
         super.layoutSubviews()
-        self.bringSubview(toFront: movingView)
     }
 
     // MARK: - Tracking user actions
 
     override open func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        guard dot1Layer != nil, dot2Layer != nil, connectorLayer != nil else { return false }
         let val = touch.location(in: movingView)
+        //Funky calculation of connector layer frame...it works...somehow
+        let rect = CGRect(x: min(dot1Layer.frame.origin.x, dot2Layer.frame.origin.x),
+                          y: min(dot1Layer.frame.origin.y, dot2Layer.frame.origin.y),
+                          width: connectorLayer.path!.boundingBoxOfPath.width,
+                          height: connectorLayer.path!.boundingBoxOfPath.height)
 
-        if dot1Layer?.frame.contains(val) == true {
-            selectedLayer = dot1Layer
-        } else if dot2Layer?.frame.contains(val) == true {
-            selectedLayer = dot2Layer
+        if dot1Layer.frame.contains(val) || dot2Layer.frame.contains(val) || rect.contains(val) {
+            touchBegin = val
         } else {
-            selectedLayer = nil
+            touchBegin = nil
         }
-
         super.beginTracking(touch, with: event)
-        return selectedLayer != nil
+        return touchBegin != nil
     }
 
     override open func endTracking(_ touch: UITouch?, with event: UIEvent?) {
         super.endTracking(touch, with: event)
+        touchBegin = nil
     }
 
     override open func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
-        if selectedLayer != nil {
+        if touchBegin != nil {
             let val = touch.location(in: self)
             getViewAngle(val)
             rotateMovingView()
@@ -123,32 +129,34 @@ open class FRCircleSlider: UIControl {
 
     override open func draw(_ rect: CGRect) {
         super.draw(rect)
-        drawProgressBackCircle(rect)
-        drawConnector(rect)
-        drawDot1(rect)
-        drawDot2(rect)
+
+        let progressLayer = drawProgressBackCircle(rect)
+
+        let dotOffsetAngle = CGFloat(0.15)
+
+        connectorLayer = drawConnector(rect)
+        let connectorAngle = CGFloat(GLKMathDegreesToRadians(-90))
+        rotateConnector(connectorLayer, forAngle: connectorAngle)
+        dot1Layer = drawDot(0, rect: rect, color: firstDotColor)
+        rotateDot(dot1Layer, forAngle: dotOffsetAngle)
+        let secondDotAngle = endpointsDifference.convertValueToRadians() + dotOffsetAngle
+        dot2Layer = drawDot(secondDotAngle, rect: rect, color: secondDotColor)
+        rotateDot(dot2Layer, forAngle: secondDotAngle)
+
+        layer.addSublayer(progressLayer)
+
+        movingView.layer.addSublayer(connectorLayer)
+        movingView.layer.addSublayer(dot1Layer)
+        movingView.layer.addSublayer(dot2Layer)
         bringSubview(toFront: movingView)
         rotateMovingView()
     }
 
-    func drawDot1(_ rect: CGRect) {
-        let angle = CGFloat(0)
-        dot1Layer = drawDot(angle, rect:rect, color: firstDotColor)
-        movingView.layer.addSublayer(dot1Layer!)
-    }
-
-    func drawDot2(_ rect: CGRect) {
-        let diff = (value2 - value1).normalizeValue()
-        let angle = valueToRadians(diff)
-        dot2Layer = drawDot(angle, rect: rect, color: secondDotColor)
-        movingView.layer.addSublayer(dot2Layer!)
-    }
-
+    @discardableResult
     func drawDot(_ angle: CGFloat, rect: CGRect, color: UIColor) -> CALayer {
-        let pathBottom = UIBezierPath(ovalIn:CGRect(x: 0, y: 0, width: arcRadius, height: arcRadius))
+        let pathBottom = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: arcRadius, height: arcRadius))
 
         let layer = CAShapeLayer()
-
         layer.lineWidth = lineWidth
         layer.path = pathBottom.cgPath
         layer.strokeStart = 0
@@ -161,22 +169,18 @@ open class FRCircleSlider: UIControl {
         layer.shadowOpacity = 0
         layer.shadowOffset = CGSize.zero
         layer.frame = pathBottom.bounds
-        self.rotateDot(layer, forAngle: angle)
 
         return layer
     }
 
-    func drawConnector(_ rect: CGRect) {
-        var diff = (value2 - value1).normalizeValue()
-        diff -= 0.02
-        let angle = CGFloat(GLKMathDegreesToRadians(-90))
+    @discardableResult
+    func drawConnector(_ rect: CGRect) -> CAShapeLayer {
+        let diff = endpointsDifference
 
-        let X = CGFloat(0)
-        let Y = CGFloat(0)
         let arcRadius: CGFloat = circleRadius
         let color = connectorColor
         let pathBottom = UIBezierPath(
-            ovalIn: CGRect(x: (X - (arcRadius/2)), y: (Y - (arcRadius/2)), width: arcRadius, height: arcRadius))
+            ovalIn: CGRect(x: -arcRadius/2, y: -arcRadius/2, width: arcRadius, height: arcRadius))
 
         let connector = CAShapeLayer()
         connector.lineWidth = connectorWidth
@@ -191,19 +195,19 @@ open class FRCircleSlider: UIControl {
         connector.shadowOpacity = 0
         connector.shadowOffset = CGSize.zero
 
-        rotateConnector(connector, forAngle: angle)
-
-        movingView.layer.addSublayer(connector)
-        connectorLayer = connector
-        movingView.setNeedsLayout()
+        return connector
     }
 
-    func drawProgressBackCircle(_ rect: CGRect) {
-        let X = self.bounds.midX
-        let Y = self.bounds.midY
+    @discardableResult
+    func drawProgressBackCircle(_ rect: CGRect) -> CALayer {
+        let centerX = self.bounds.midX
+        let centerY = self.bounds.midY
         let arcRadius: CGFloat = circleRadius
         let pathBottom = UIBezierPath(
-            ovalIn: CGRect(x: (X - (arcRadius/2)), y: (Y - (arcRadius/2)), width: arcRadius, height: arcRadius))
+            ovalIn: CGRect(x: (centerX - (arcRadius/2)),
+                           y: (centerY - (arcRadius/2)),
+                           width: arcRadius,
+                           height: arcRadius))
 
         let arc = CAShapeLayer()
         arc.lineWidth = lineWidth
@@ -218,39 +222,19 @@ open class FRCircleSlider: UIControl {
         arc.shadowOpacity = 0
         arc.shadowOffset = CGSize.zero
 
-        layer.addSublayer(arc)
+        return arc
     }
 
     // MARK: - Caculation helper methods
 
-    func valueToRadians(_ value: CGFloat) -> CGFloat {
-        return CGFloat(GLKMathDegreesToRadians(360) * Float(value))
-    }
-
-    func radiansToValue(_ radians: CGFloat) -> CGFloat {
-        return CGFloat(Float(radians)/GLKMathDegreesToRadians(360))
-    }
-
     func getViewAngle(_ val: CGPoint) {
         let rect = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
-
-        if selectedLayer == dot1Layer {
-            angle = self.getAngle(val, layer: dot1Layer!, rect: rect)
-        } else if selectedLayer == dot2Layer {
-            let angle2 = self.getAngle(val, layer: dot2Layer!, rect: rect)
-            let currentValue = radiansToValue(angle2)
-            let diff = value1 - value2
-            angle = valueToRadians(diff + currentValue)
-        }
-    }
-
-    func getViewAngleFromValue(_ value: CGFloat) {
-        angle = valueToRadians(value)
+        angle = getAngle(val, rect: rect) - getAngle(touchBegin!, rect: rect)
     }
 
     func recalculate() {
-        let diff = (value2 - value1).normalizeValue()
-        let newValue1 = self.radiansToValue(angle)
+        let diff = endpointsDifference
+        let newValue1 = angle.convertRadiansToValue()
         let newValue2 = newValue1 + diff
 
         value1 = newValue1.normalizeValue()
@@ -261,12 +245,16 @@ open class FRCircleSlider: UIControl {
         circleRadius = min(self.frame.height, self.frame.width) - arcRadius - lineWidth * 2
     }
 
-    func getAngle(_ point: CGPoint, layer: CALayer, rect: CGRect) -> CGFloat {
-        let x = point.x - rect.midX
-        let y = rect.midY - point.y
+    /// Gets the angle between point and rectangle center in radians
+    /// - parameter point: Point
+    /// - parameter rect:
+    /// - returns: Angle in radians
+    func getAngle(_ point: CGPoint, rect: CGRect) -> CGFloat {
+        let diffX = point.x - rect.midX
+        let diffY = rect.midY - point.y
 
         var angle: Float = 0
-        angle = atan2f(Float(x), Float(y))
+        angle = atan2f(Float(diffX), Float(diffY))
 
         return CGFloat(angle)
     }
