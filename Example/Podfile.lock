@@ -1,5 +1,5 @@
 PODS:
-  - FRCircleSlider (0.1.0)
+  - FRCircleSlider (0.1.3)
 
 DEPENDENCIES:
   - FRCircleSlider (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FRCircleSlider: 334c5c8f81b4400e9ee8d57b0b07b0ca669c55aa
+  FRCircleSlider: 7fcb47dd4a7334a87a2381cafce1e6aed54a22f9
 
 PODFILE CHECKSUM: cdafdaabdf83aa90af054873f34541088ad9c78a
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3

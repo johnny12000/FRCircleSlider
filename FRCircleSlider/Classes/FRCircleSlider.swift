@@ -68,7 +68,7 @@ open class FRCircleSlider: UIControl {
         movingView.translatesAutoresizingMaskIntoConstraints = false
         movingView.clipsToBounds = true
         addSubview(movingView)
-        bringSubview(toFront: movingView)
+        bringSubviewToFront(movingView)
         addConstraints([
             movingView.widthAnchor.constraint(equalTo: widthAnchor),
             movingView.heightAnchor.constraint(equalTo: heightAnchor),
@@ -120,7 +120,7 @@ open class FRCircleSlider: UIControl {
             if #available(iOS 10, *) {
                 //(hapticGenerator as? UISelectionFeedbackGenerator)?.selectionChanged()
             }
-            self.sendActions(for: UIControlEvents.valueChanged)
+            self.sendActions(for: UIControl.Event.valueChanged)
         }
         return super.continueTracking(touch, with: event)
     }
@@ -148,7 +148,7 @@ open class FRCircleSlider: UIControl {
         movingView.layer.addSublayer(connectorLayer)
         movingView.layer.addSublayer(dot1Layer)
         movingView.layer.addSublayer(dot2Layer)
-        bringSubview(toFront: movingView)
+        bringSubviewToFront(movingView)
         rotateMovingView()
     }
 
@@ -161,7 +161,7 @@ open class FRCircleSlider: UIControl {
         layer.path = pathBottom.cgPath
         layer.strokeStart = 0
         layer.strokeEnd = 1
-        layer.lineCap = "round"
+        layer.lineCap = CAShapeLayerLineCap(rawValue: "round")
         layer.strokeColor = color.cgColor
         layer.fillColor = color.cgColor
         layer.shadowColor = UIColor.clear.cgColor
@@ -187,7 +187,7 @@ open class FRCircleSlider: UIControl {
         connector.path = pathBottom.cgPath
         connector.strokeStart = 0
         connector.strokeEnd = diff
-        connector.lineCap = "round"
+        connector.lineCap = CAShapeLayerLineCap(rawValue: "round")
         connector.strokeColor = color.cgColor
         connector.fillColor = UIColor.clear.cgColor
         connector.shadowColor = UIColor.black.cgColor
@@ -214,7 +214,7 @@ open class FRCircleSlider: UIControl {
         arc.path = pathBottom.cgPath
         arc.strokeStart = 0
         arc.strokeEnd = 1
-        arc.lineCap = "round"
+        arc.lineCap = CAShapeLayerLineCap(rawValue: "round")
         arc.strokeColor = tintColor.cgColor
         arc.fillColor = UIColor.clear.cgColor
         arc.shadowColor = UIColor.clear.cgColor
