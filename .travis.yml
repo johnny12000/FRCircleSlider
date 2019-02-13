@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode9.1
+osx_image: xcode10.1
 branches:
   only:
     - master
@@ -8,7 +8,7 @@ env:
     - LANG=en_US.UTF-8
     - WORKSPACE=Example/FRCircleSlider.xcworkspace
     - SCHEME="FRCircleSlider-Example"
-    - DESTINATION="OS=11.1,name=iPhone X"
+    - DESTINATION="OS=12.1,name=iPhone X"
 script:
   - set -o pipefail
   - xcodebuild -version
