@@ -1,6 +1,6 @@
 {
   "name": "FRCircleSlider",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "summary": "Select two values on a circular slider",
   "description": "Select two values on a circular slider",
   "homepage": "https://github.com/johnny12000/FRCircleSlider",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/johnny12000/FRCircleSlider.git",
-    "tag": "0.1.3"
+    "tag": "0.1.5"
   },
   "platforms": {
     "ios": "9.0"

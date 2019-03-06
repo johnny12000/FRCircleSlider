@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08DE51EE5851A4A6879D50BEDDF25CC3 /* CALayer+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445876A931242EA856D764AD05BBE24C /* CALayer+Helpers.swift */; };
+		09B7C17D20AFBD2FFCDB21F1F6A60F61 /* FRCircleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A772A2655ADDA6ABF47D035E5A8619 /* FRCircleSlider.swift */; };
 		2237651BA6C3CF1F9ABBCD02CFD5ED78 /* Pods-FRCircleSlider_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A59EAFCD8D848769E5403C8E9EC954 /* Pods-FRCircleSlider_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5703016D1775698F1D1DF61DE948859D /* CGUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3849F3AA06DD61E59211E6D64B498557 /* CGUtilities.swift */; };
 		5B62480610CC9D89DC0F0A03FCE39A74 /* Pods-FRCircleSlider_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C9C9816C21EAF55711CC4876213EAE2A /* Pods-FRCircleSlider_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61672568E3D6CE5678F383844425E163 /* FRCircleSlider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A7F36D20A148230124E91FDA5B26D362 /* FRCircleSlider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62CEA6E645BD9505CEACB11CD28C24EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		7712791FD337A1B92B84C357969FFFA0 /* Pods-FRCircleSlider_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C25B77AF3E70C1BA5948FB2B17819AB1 /* Pods-FRCircleSlider_Tests-dummy.m */; };
-		7D334EC138E0C844347251D946D5FB59 /* CGUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C1617F6BADE26A1795B35C90F73F4 /* CGUtilities.swift */; };
+		8DCB70448905E6AD656033B1C644D690 /* FRCircleSlider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FE67E54A0C12D0DC359921CD7B056D /* FRCircleSlider-dummy.m */; };
 		983319BD2682F8DCF6FD5B1D5A8D0A3E /* Pods-FRCircleSlider_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB7F2BC2BC3E8AFA39CC2FB4E31E3C4 /* Pods-FRCircleSlider_Example-dummy.m */; };
-		ACA995EB2B029D90DF4A6B73B13938C7 /* FRCircleSlider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 152E1C47446A1F23D7AAF5C0CC052325 /* FRCircleSlider-dummy.m */; };
-		B204ECD2222FD9C700747546 /* CALayer+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B204ECD1222FD9C700747546 /* CALayer+Helpers.swift */; };
 		C7266F46E2F792B6E41485A52858FEEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		CA29D5F7AB85732CC8987D73716A67A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		ED2964A3F49623F16B4971F8F04C5385 /* FRCircleSlider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EB4681BE4A174299B319EF5E6C914FC2 /* FRCircleSlider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F57887B153A234E3903006106CC8AEDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		F9575EC4F95D26A1FD1EEA68458D0A96 /* FRCircleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647EB1C6E7C1E3D483A8B2C86BEA677 /* FRCircleSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,49 +33,49 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8C5D334ECFF67ADD859ED5031D27D317;
+			remoteGlobalIDString = 6126EF9DD356EECFBB738757E84D57CD;
 			remoteInfo = FRCircleSlider;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00B9A45AA6ED40C3FCFC2EE4F89E43F4 /* FRCircleSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FRCircleSlider.modulemap; sourceTree = "<group>"; };
-		059BFF900783657024BAC44F75BEEA01 /* Pods_FRCircleSlider_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FRCircleSlider_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		059BFF900783657024BAC44F75BEEA01 /* Pods_FRCircleSlider_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FRCircleSlider_Tests.framework; path = "Pods-FRCircleSlider_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07CE2C91B24FEC5270DFAE65AC63A093 /* Pods-FRCircleSlider_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FRCircleSlider_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		10A39A86BBE2B11F1C5D369E33B4808C /* Pods-FRCircleSlider_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FRCircleSlider_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		152E1C47446A1F23D7AAF5C0CC052325 /* FRCircleSlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FRCircleSlider-dummy.m"; sourceTree = "<group>"; };
+		17A772A2655ADDA6ABF47D035E5A8619 /* FRCircleSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FRCircleSlider.swift; path = FRCircleSlider/Classes/FRCircleSlider.swift; sourceTree = "<group>"; };
 		1D137E565DB3EBBB9B9684134C93CC09 /* Pods-FRCircleSlider_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FRCircleSlider_Example-frameworks.sh"; sourceTree = "<group>"; };
-		1E686FD1A4D5B684D66A863DC8728D86 /* FRCircleSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FRCircleSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		205228DDAECD80FC95FBACF71D4DE009 /* FRCircleSlider.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = FRCircleSlider.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		2AE0873FE6A49947FEDA3D5158D2EA97 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		2B7C1617F6BADE26A1795B35C90F73F4 /* CGUtilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGUtilities.swift; path = FRCircleSlider/Classes/CGUtilities.swift; sourceTree = "<group>"; };
+		1E686FD1A4D5B684D66A863DC8728D86 /* FRCircleSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FRCircleSlider.framework; path = FRCircleSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FC76234636C1BA8A5CD3A1AE493DFD6 /* FRCircleSlider.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = FRCircleSlider.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		36C6B2C62C89E8DEEAB7D91ED890B262 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3849F3AA06DD61E59211E6D64B498557 /* CGUtilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGUtilities.swift; path = FRCircleSlider/Classes/CGUtilities.swift; sourceTree = "<group>"; };
 		39C9C0D1E89BC4A50DF854DDFEFB90F0 /* Pods-FRCircleSlider_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FRCircleSlider_Example.modulemap"; sourceTree = "<group>"; };
+		3A00A0C390B8FD4BB5CD7404EBE8F710 /* FRCircleSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FRCircleSlider.modulemap; sourceTree = "<group>"; };
 		3D57EB509EE31F5AE0ADC0738AD59F03 /* Pods-FRCircleSlider_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FRCircleSlider_Example.release.xcconfig"; sourceTree = "<group>"; };
-		484D4F9FBB9706F2E4181F1E68885FB1 /* FRCircleSlider.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FRCircleSlider.xcconfig; sourceTree = "<group>"; };
-		57E492CD65B7B392C5B1A06D9ECDF3A2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		445876A931242EA856D764AD05BBE24C /* CALayer+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CALayer+Helpers.swift"; path = "FRCircleSlider/Classes/CALayer+Helpers.swift"; sourceTree = "<group>"; };
+		59FE67E54A0C12D0DC359921CD7B056D /* FRCircleSlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FRCircleSlider-dummy.m"; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5D2BC1764EF4F01DACE6EC2CB908864D /* FRCircleSlider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FRCircleSlider-prefix.pch"; sourceTree = "<group>"; };
+		5F4EAE58C11C4ED47B415C42E5225F7E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		6FC0A0D5647B7F63E6B3FA93CB580AB0 /* Pods-FRCircleSlider_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FRCircleSlider_Example-resources.sh"; sourceTree = "<group>"; };
 		72A3C2715FDAF0D050C77BB0C04B0E7C /* Pods-FRCircleSlider_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FRCircleSlider_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		75C08387EEB12FC87C224E697D5B0D07 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CB7F2BC2BC3E8AFA39CC2FB4E31E3C4 /* Pods-FRCircleSlider_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FRCircleSlider_Example-dummy.m"; sourceTree = "<group>"; };
-		7E25BBA86673A3253A8E73B47319569C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		824CBF32777BC5ADD9F8B514EE4354E0 /* Pods-FRCircleSlider_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FRCircleSlider_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8C5CA4DFDEA60DEFB4A6ABF59A0403A0 /* Pods-FRCircleSlider_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FRCircleSlider_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DAA7DAE9527447A843634074DFC1087 /* Pods-FRCircleSlider_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FRCircleSlider_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B204ECD1222FD9C700747546 /* CALayer+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Helpers.swift"; sourceTree = "<group>"; };
-		BC0AFEFC1CB1E0EC1FD6E5CB73BFE42B /* FRCircleSlider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FRCircleSlider-prefix.pch"; sourceTree = "<group>"; };
+		A7F36D20A148230124E91FDA5B26D362 /* FRCircleSlider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FRCircleSlider-umbrella.h"; sourceTree = "<group>"; };
+		AF215CC3CCD86BC0763B99AD04B97821 /* FRCircleSlider.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FRCircleSlider.xcconfig; sourceTree = "<group>"; };
 		C25B77AF3E70C1BA5948FB2B17819AB1 /* Pods-FRCircleSlider_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FRCircleSlider_Tests-dummy.m"; sourceTree = "<group>"; };
 		C2A59EAFCD8D848769E5403C8E9EC954 /* Pods-FRCircleSlider_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FRCircleSlider_Tests-umbrella.h"; sourceTree = "<group>"; };
+		C7CCF5B88F42DEA2D76163721E54BC3B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9C9816C21EAF55711CC4876213EAE2A /* Pods-FRCircleSlider_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FRCircleSlider_Example-umbrella.h"; sourceTree = "<group>"; };
 		CFC8B9A12080CCD255B5D1F4124411DC /* Pods-FRCircleSlider_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FRCircleSlider_Tests-resources.sh"; sourceTree = "<group>"; };
+		D1AB6E4ECCFFAB6524DB30E34786D67B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		E87739C594CFC804E83925DADA72DDAD /* Pods-FRCircleSlider_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FRCircleSlider_Tests.modulemap"; sourceTree = "<group>"; };
-		EB4681BE4A174299B319EF5E6C914FC2 /* FRCircleSlider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FRCircleSlider-umbrella.h"; sourceTree = "<group>"; };
-		EB7D281AD1986DA2DA4913A5ECFA1E75 /* Pods_FRCircleSlider_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FRCircleSlider_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB7D281AD1986DA2DA4913A5ECFA1E75 /* Pods_FRCircleSlider_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FRCircleSlider_Example.framework; path = "Pods-FRCircleSlider_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE26D096C46FB77AF788B53F58BE529A /* Pods-FRCircleSlider_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FRCircleSlider_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F3C9B3792143D4303006901AD3BE0783 /* Pods-FRCircleSlider_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FRCircleSlider_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F647EB1C6E7C1E3D483A8B2C86BEA677 /* FRCircleSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FRCircleSlider.swift; path = FRCircleSlider/Classes/FRCircleSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,19 +87,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E137E1A3EA903E55314D7146C1FDFC84 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CA29D5F7AB85732CC8987D73716A67A2 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EDAB26C4E8D111F437FA1AD15446BFEB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F57887B153A234E3903006106CC8AEDA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F849DDC98BB0A550E6BE54F91F8DD656 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62CEA6E645BD9505CEACB11CD28C24EC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,33 +115,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		1ABEF2F548CEF5DB62145B4B4D85C662 /* FRCircleSlider */ = {
-			isa = PBXGroup;
-			children = (
-				B204ECD1222FD9C700747546 /* CALayer+Helpers.swift */,
-				2B7C1617F6BADE26A1795B35C90F73F4 /* CGUtilities.swift */,
-				F647EB1C6E7C1E3D483A8B2C86BEA677 /* FRCircleSlider.swift */,
-				7045CC5EA07D858FC7F05D06580AFEB9 /* Pod */,
-				2F6AEB05CA4AB5EB4B621005772DB804 /* Support Files */,
-			);
-			name = FRCircleSlider;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		2F6AEB05CA4AB5EB4B621005772DB804 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				00B9A45AA6ED40C3FCFC2EE4F89E43F4 /* FRCircleSlider.modulemap */,
-				484D4F9FBB9706F2E4181F1E68885FB1 /* FRCircleSlider.xcconfig */,
-				152E1C47446A1F23D7AAF5C0CC052325 /* FRCircleSlider-dummy.m */,
-				BC0AFEFC1CB1E0EC1FD6E5CB73BFE42B /* FRCircleSlider-prefix.pch */,
-				EB4681BE4A174299B319EF5E6C914FC2 /* FRCircleSlider-umbrella.h */,
-				7E25BBA86673A3253A8E73B47319569C /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/FRCircleSlider";
-			sourceTree = "<group>";
-		};
 		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,12 +123,12 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		7045CC5EA07D858FC7F05D06580AFEB9 /* Pod */ = {
+		6A15EF824998DBC6904FA73C82130BD3 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				205228DDAECD80FC95FBACF71D4DE009 /* FRCircleSlider.podspec */,
-				2AE0873FE6A49947FEDA3D5158D2EA97 /* LICENSE */,
-				57E492CD65B7B392C5B1A06D9ECDF3A2 /* README.md */,
+				2FC76234636C1BA8A5CD3A1AE493DFD6 /* FRCircleSlider.podspec */,
+				5F4EAE58C11C4ED47B415C42E5225F7E /* LICENSE */,
+				D1AB6E4ECCFFAB6524DB30E34786D67B /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -164,7 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				FDD86766C02F5905182C7E228CE55B32 /* Development Pods */,
+				CC271C581C03B2F6281E591B22D04067 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				A235AF184D957CCC7567A6C3B260C77E /* Products */,
 				0D6E78FE6B86A29FEF68E84FB755EF88 /* Targets Support Files */,
@@ -199,6 +172,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A6FB4FFFFD51411498C81493AE455DE7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A00A0C390B8FD4BB5CD7404EBE8F710 /* FRCircleSlider.modulemap */,
+				AF215CC3CCD86BC0763B99AD04B97821 /* FRCircleSlider.xcconfig */,
+				59FE67E54A0C12D0DC359921CD7B056D /* FRCircleSlider-dummy.m */,
+				5D2BC1764EF4F01DACE6EC2CB908864D /* FRCircleSlider-prefix.pch */,
+				A7F36D20A148230124E91FDA5B26D362 /* FRCircleSlider-umbrella.h */,
+				C7CCF5B88F42DEA2D76163721E54BC3B /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/FRCircleSlider";
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,30 +212,43 @@
 			path = "Target Support Files/Pods-FRCircleSlider_Example";
 			sourceTree = "<group>";
 		};
-		FDD86766C02F5905182C7E228CE55B32 /* Development Pods */ = {
+		CC271C581C03B2F6281E591B22D04067 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1ABEF2F548CEF5DB62145B4B4D85C662 /* FRCircleSlider */,
+				E2F47F3395A2854F14C01BBC19BCF3B7 /* FRCircleSlider */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		E2F47F3395A2854F14C01BBC19BCF3B7 /* FRCircleSlider */ = {
+			isa = PBXGroup;
+			children = (
+				445876A931242EA856D764AD05BBE24C /* CALayer+Helpers.swift */,
+				3849F3AA06DD61E59211E6D64B498557 /* CGUtilities.swift */,
+				17A772A2655ADDA6ABF47D035E5A8619 /* FRCircleSlider.swift */,
+				6A15EF824998DBC6904FA73C82130BD3 /* Pod */,
+				A6FB4FFFFD51411498C81493AE455DE7 /* Support Files */,
+			);
+			name = FRCircleSlider;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4D33C86D84726DAB67CC071A4BDBCC1F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ED2964A3F49623F16B4971F8F04C5385 /* FRCircleSlider-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		665CB032CDBFD1C172B05F57A24AA406 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2237651BA6C3CF1F9ABBCD02CFD5ED78 /* Pods-FRCircleSlider_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92842E25B28A5144A8BC8DEB3EDC8FBD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61672568E3D6CE5678F383844425E163 /* FRCircleSlider-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +263,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		6126EF9DD356EECFBB738757E84D57CD /* FRCircleSlider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9D8D028405B108B09B80B099C0D2AAB /* Build configuration list for PBXNativeTarget "FRCircleSlider" */;
+			buildPhases = (
+				92842E25B28A5144A8BC8DEB3EDC8FBD /* Headers */,
+				1B35DD97E5E4065199D603216A3D9D3A /* Sources */,
+				F849DDC98BB0A550E6BE54F91F8DD656 /* Frameworks */,
+				A996C238BFD2A49546BBCFC09E229968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FRCircleSlider;
+			productName = FRCircleSlider;
+			productReference = 1E686FD1A4D5B684D66A863DC8728D86 /* FRCircleSlider.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		78E632BE81C0E9D369CB582B5EA12C37 /* Pods-FRCircleSlider_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E5865B37E1EF64CC14C123715197373 /* Build configuration list for PBXNativeTarget "Pods-FRCircleSlider_Tests" */;
@@ -280,24 +298,6 @@
 			name = "Pods-FRCircleSlider_Tests";
 			productName = "Pods-FRCircleSlider_Tests";
 			productReference = 059BFF900783657024BAC44F75BEEA01 /* Pods_FRCircleSlider_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		8C5D334ECFF67ADD859ED5031D27D317 /* FRCircleSlider */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D1382D22582B3A7C80EBC6B44E57B39C /* Build configuration list for PBXNativeTarget "FRCircleSlider" */;
-			buildPhases = (
-				4D33C86D84726DAB67CC071A4BDBCC1F /* Headers */,
-				F82685C210602BDC50E311732A6179C7 /* Sources */,
-				E137E1A3EA903E55314D7146C1FDFC84 /* Frameworks */,
-				06563F46A32FED907BC65641A2D50B50 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = FRCircleSlider;
-			productName = FRCircleSlider;
-			productReference = 1E686FD1A4D5B684D66A863DC8728D86 /* FRCircleSlider.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		DF4F57F7138C456586137BABD31E8417 /* Pods-FRCircleSlider_Example */ = {
@@ -340,7 +340,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8C5D334ECFF67ADD859ED5031D27D317 /* FRCircleSlider */,
+				6126EF9DD356EECFBB738757E84D57CD /* FRCircleSlider */,
 				DF4F57F7138C456586137BABD31E8417 /* Pods-FRCircleSlider_Example */,
 				78E632BE81C0E9D369CB582B5EA12C37 /* Pods-FRCircleSlider_Tests */,
 			);
@@ -348,13 +348,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		06563F46A32FED907BC65641A2D50B50 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		86B5609CD8DEE60ADC3DB0F2596126C3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -363,6 +356,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		924541951FBFC70BA1569B5EC14D3EC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A996C238BFD2A49546BBCFC09E229968 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -380,22 +380,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1B35DD97E5E4065199D603216A3D9D3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08DE51EE5851A4A6879D50BEDDF25CC3 /* CALayer+Helpers.swift in Sources */,
+				5703016D1775698F1D1DF61DE948859D /* CGUtilities.swift in Sources */,
+				8DCB70448905E6AD656033B1C644D690 /* FRCircleSlider-dummy.m in Sources */,
+				09B7C17D20AFBD2FFCDB21F1F6A60F61 /* FRCircleSlider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4EB75AE4EA05BF7F98EA73A2E521618 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				983319BD2682F8DCF6FD5B1D5A8D0A3E /* Pods-FRCircleSlider_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F82685C210602BDC50E311732A6179C7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7D334EC138E0C844347251D946D5FB59 /* CGUtilities.swift in Sources */,
-				ACA995EB2B029D90DF4A6B73B13938C7 /* FRCircleSlider-dummy.m in Sources */,
-				F9575EC4F95D26A1FD1EEA68458D0A96 /* FRCircleSlider.swift in Sources */,
-				B204ECD2222FD9C700747546 /* CALayer+Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +405,7 @@
 		0CDB12DB3B8568FE0EC3F06B5312B1F6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FRCircleSlider;
-			target = 8C5D334ECFF67ADD859ED5031D27D317 /* FRCircleSlider */;
+			target = 6126EF9DD356EECFBB738757E84D57CD /* FRCircleSlider */;
 			targetProxy = 6E717E09C7A7A966164549AB120F0A1E /* PBXContainerItemProxy */;
 		};
 		387E98FA8A5E4379ADC820BBA36D07F6 /* PBXTargetDependency */ = {
@@ -479,6 +479,40 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2AF3110BE920372A2D6A6C7A5502D806 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF215CC3CCD86BC0763B99AD04B97821 /* FRCircleSlider.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FRCircleSlider/FRCircleSlider-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FRCircleSlider/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FRCircleSlider/FRCircleSlider.modulemap";
+				PRODUCT_MODULE_NAME = FRCircleSlider;
+				PRODUCT_NAME = FRCircleSlider;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -610,40 +644,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A887A3FEB96DDB8B0BB8908E65EA2D6E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 484D4F9FBB9706F2E4181F1E68885FB1 /* FRCircleSlider.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/FRCircleSlider/FRCircleSlider-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FRCircleSlider/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FRCircleSlider/FRCircleSlider.modulemap";
-				PRODUCT_MODULE_NAME = FRCircleSlider;
-				PRODUCT_NAME = FRCircleSlider;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -710,9 +712,9 @@
 			};
 			name = Release;
 		};
-		F8D001E14CB9C663430932420C6B6F93 /* Debug */ = {
+		E31F9D5235BC119E52BA7781CAB1921A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 484D4F9FBB9706F2E4181F1E68885FB1 /* FRCircleSlider.xcconfig */;
+			baseConfigurationReference = AF215CC3CCD86BC0763B99AD04B97821 /* FRCircleSlider.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -772,11 +774,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D1382D22582B3A7C80EBC6B44E57B39C /* Build configuration list for PBXNativeTarget "FRCircleSlider" */ = {
+		C9D8D028405B108B09B80B099C0D2AAB /* Build configuration list for PBXNativeTarget "FRCircleSlider" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F8D001E14CB9C663430932420C6B6F93 /* Debug */,
-				A887A3FEB96DDB8B0BB8908E65EA2D6E /* Release */,
+				E31F9D5235BC119E52BA7781CAB1921A /* Debug */,
+				2AF3110BE920372A2D6A6C7A5502D806 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
