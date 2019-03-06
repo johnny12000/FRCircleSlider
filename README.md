@@ -5,11 +5,20 @@
 [![License](https://img.shields.io/cocoapods/l/FRCircleSlider.svg?style=flat)](http://cocoapods.org/pods/FRCircleSlider)
 [![Platform](https://img.shields.io/cocoapods/p/FRCircleSlider.svg?style=flat)](http://cocoapods.org/pods/FRCircleSlider)
 
+FRCircleSlider is circular slide control written in Swift.
+This control is user-friendly out-of-the-box, but the best results will be achieved if its appearance is customized.
+It is most useful for closed, repeated and circular set of values (e.g. specific subset of numbers, time, etc...)
+
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
+1. Swift 4.2+
+2. XCode 10.1+
+3. iOS 9.0+
 
 ## Installation
 
@@ -22,7 +31,7 @@ pod "FRCircleSlider"
 
 ## Author
 
-johnny12000, ristic.nikola@icloud.com
+Ristic Nikola, ristic.nikola@icloud.com
 
 ## License
 
