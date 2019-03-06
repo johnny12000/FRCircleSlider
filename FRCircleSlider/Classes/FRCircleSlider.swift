@@ -130,17 +130,19 @@ open class FRCircleSlider: UIControl {
     override open func draw(_ rect: CGRect) {
         super.draw(rect)
 
-        let progressLayer = drawProgressBackCircle(rect)
+        let progressLayer = CALayer.drawProgressBackCircle(bounds: bounds, radius: circleRadius,
+                                                           width: lineWidth, color: tintColor)
 
         let dotOffsetAngle = CGFloat(0.15)
 
-        connectorLayer = drawConnector(rect)
+        connectorLayer = CALayer.drawConnector(difference: endpointsDifference,
+                                               radius: circleRadius, color: connectorColor, width: connectorWidth)
         let connectorAngle = CGFloat(GLKMathDegreesToRadians(-90))
         rotateConnector(connectorLayer, forAngle: connectorAngle)
-        dot1Layer = drawDot(0, rect: rect, color: firstDotColor)
+        dot1Layer = CALayer.drawDot(color: firstDotColor, radius: arcRadius, lineWidth: lineWidth)
         rotateDot(dot1Layer, forAngle: dotOffsetAngle)
         let secondDotAngle = endpointsDifference.convertValueToRadians() + dotOffsetAngle
-        dot2Layer = drawDot(secondDotAngle, rect: rect, color: secondDotColor)
+        dot2Layer = CALayer.drawDot(color: secondDotColor, radius: arcRadius, lineWidth: lineWidth)
         rotateDot(dot2Layer, forAngle: secondDotAngle)
 
         layer.addSublayer(progressLayer)
@@ -150,79 +152,6 @@ open class FRCircleSlider: UIControl {
         movingView.layer.addSublayer(dot2Layer)
         bringSubviewToFront(movingView)
         rotateMovingView()
-    }
-
-    @discardableResult
-    func drawDot(_ angle: CGFloat, rect: CGRect, color: UIColor) -> CALayer {
-        let pathBottom = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: arcRadius, height: arcRadius))
-
-        let layer = CAShapeLayer()
-        layer.lineWidth = lineWidth
-        layer.path = pathBottom.cgPath
-        layer.strokeStart = 0
-        layer.strokeEnd = 1
-        layer.lineCap = CAShapeLayerLineCap(rawValue: "round")
-        layer.strokeColor = color.cgColor
-        layer.fillColor = color.cgColor
-        layer.shadowColor = UIColor.clear.cgColor
-        layer.shadowRadius = 0
-        layer.shadowOpacity = 0
-        layer.shadowOffset = CGSize.zero
-        layer.frame = pathBottom.bounds
-
-        return layer
-    }
-
-    @discardableResult
-    func drawConnector(_ rect: CGRect) -> CAShapeLayer {
-        let diff = endpointsDifference
-
-        let arcRadius: CGFloat = circleRadius
-        let color = connectorColor
-        let pathBottom = UIBezierPath(
-            ovalIn: CGRect(x: -arcRadius/2, y: -arcRadius/2, width: arcRadius, height: arcRadius))
-
-        let connector = CAShapeLayer()
-        connector.lineWidth = connectorWidth
-        connector.path = pathBottom.cgPath
-        connector.strokeStart = 0
-        connector.strokeEnd = diff
-        connector.lineCap = CAShapeLayerLineCap(rawValue: "round")
-        connector.strokeColor = color.cgColor
-        connector.fillColor = UIColor.clear.cgColor
-        connector.shadowColor = UIColor.black.cgColor
-        connector.shadowRadius = 0
-        connector.shadowOpacity = 0
-        connector.shadowOffset = CGSize.zero
-
-        return connector
-    }
-
-    @discardableResult
-    func drawProgressBackCircle(_ rect: CGRect) -> CALayer {
-        let centerX = self.bounds.midX
-        let centerY = self.bounds.midY
-        let arcRadius: CGFloat = circleRadius
-        let pathBottom = UIBezierPath(
-            ovalIn: CGRect(x: (centerX - (arcRadius/2)),
-                           y: (centerY - (arcRadius/2)),
-                           width: arcRadius,
-                           height: arcRadius))
-
-        let arc = CAShapeLayer()
-        arc.lineWidth = lineWidth
-        arc.path = pathBottom.cgPath
-        arc.strokeStart = 0
-        arc.strokeEnd = 1
-        arc.lineCap = CAShapeLayerLineCap(rawValue: "round")
-        arc.strokeColor = tintColor.cgColor
-        arc.fillColor = UIColor.clear.cgColor
-        arc.shadowColor = UIColor.clear.cgColor
-        arc.shadowRadius = 0
-        arc.shadowOpacity = 0
-        arc.shadowOffset = CGSize.zero
-
-        return arc
     }
 
     // MARK: - Caculation helper methods
@@ -283,6 +212,8 @@ open class FRCircleSlider: UIControl {
             self.movingView.layer.setAffineTransform(CGAffineTransform.identity.rotated(by: self.angle))
         })
     }
+
+    // MARK: - Override methods
 
     override open var intrinsicContentSize: CGSize {
         if frame.size == CGSize.zero {
